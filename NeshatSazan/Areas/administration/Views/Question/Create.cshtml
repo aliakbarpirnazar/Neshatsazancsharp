@@ -1,0 +1,76 @@
+﻿@model ServiceLayer.ViewModels.Admin.AskedQuestionViewModels.CreateAskedQuestion
+
+@{
+    Layout = "~/areas/administration/views/shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "ایجاد سوال جدید";
+}
+<div class="card">
+    <div class="modal-header">
+        <h4 class="modal-title">@ViewData["Title"]</h4>
+    </div>
+
+    <form asp-action="Create" asp-controller="Question"
+          method="post"
+          
+          enctype="multipart/form-data">
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label asp-for="Language" class="form-label">انمتخاب زبان</label>
+                        <select type="text" class="form-select" asp-for="Language">
+                            <option value="0">فارسی</option>
+                            <option value="1">انگلیسی</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="mb-3">
+                        <label asp-for="Qusetion" class="form-label"></label>
+                        <input type="text" class="form-control" asp-for="Qusetion">
+                        <span asp-validation-for="Qusetion" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label asp-for="OrderBy" class="form-label"></label>
+                        <input type="text" class="form-control" asp-for="OrderBy">
+                        <span asp-validation-for="OrderBy" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="mb-3">
+                        <label asp-for="Answer" class="form-label"></label>
+                        <textarea type="text" class="form-control Answer" asp-for="Answer"></textarea>
+                        <span asp-validation-for="Answer" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-info waves-effect waves-light">ایجاد</button>
+        </div>
+    </form>
+</div>
+
+@section Scripts{
+
+    <script src="~/ckeditor/ckeditor.js"></script>
+    <script src="~/ckeditor/adapters/jquery.js"></script>
+    <script>
+        $(function () {
+            $('#Answer').ckeditor();
+        });
+    </script>
+}
+

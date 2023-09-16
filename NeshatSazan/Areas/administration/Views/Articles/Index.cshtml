@@ -1,0 +1,119 @@
+﻿@model ServiceLayer.ViewModels.Admin.ArticleViewModels.ArticleIndexViewModel
+@{
+    Layout = "~/areas/administration/views/shared/_AdminLayout.cshtml";
+    ViewData["title"] = "مدیریت مقالات";
+}
+
+<div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+    <div class="pe-3"><h4 class="page-title">@ViewData["title"]</h4></div>
+
+    <div class="ms-auto">
+        <a class="btn btn-success btn-lg" href="/administration/Articles/create">ایجاد</a>
+    </div>
+</div>
+<hr />
+
+<div class="card">
+    <div class="card-header">
+        <form class="form-inline" role="form" method="get">
+            <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+                <div class="pe-3">
+                    <h4 class="page-title">
+                        <input class="form-control" asp-for="Title" placeholder="عنوان مقاله">
+                    </h4>
+
+                </div>
+                <div class="pe-3">
+                    <h4 class="page-title">
+                        <select class="form-select " asp-for="CategoryId" asp-items='new SelectList(Model.ArticleCategories,"Id","Name")'>
+                            <option value="0">گروه مقاله ...</option>
+                        </select>
+                    </h4>
+                </div>
+
+                <div class="ms-auto">
+                    <button type="submit" class="btn btn-success waves-effect waves-light m-l-10">جستجو</button>
+                    <a class="btn btn-primary waves-effect waves-light m-l-10" href="/administration/Articles">مشاهده همه</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-body">
+        <table id="example" class="table table-striped table-bordered" style="width:100%">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>عکس</th>
+                    <th>عنوان</th>
+                    <th>گروه</th>
+                    <th>توضیحات کوتاه</th>
+                    <th>تاریخ انتشار</th>
+                    <th> وضعیت</th>
+                    <th>عملیات</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.articleModels)
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>
+                            <img src="~/ViewPicture/@item.Picture" style="width: 40px; height: 40px" />
+                        </td>
+                        <td>@item.Title</td>
+                        <td>@item.Category</td>
+                        <td>@item.ShortDescription</td>
+                        <td>@item.PublishDate</td>
+                        <td>
+                            @if (!item.IsRemoved)
+                            {
+                                <p class="text-success">موجود</p>
+                            }
+                            @if (item.IsRemoved)
+                            {
+                                <p class="text-danger">حذف شده</p>
+                            }
+                        </td>
+                        <td>
+                            <a class="btn btn-warning pull-right m-rl-5" href="/administration/Articles/Edit/@item.Id">
+                                ویرایش
+                            </a>
+                            @if (!item.IsRemoved)
+                            {
+                                <a asp-action="Delete" asp-controller="Articles" asp-route-id="@item.Id" class="btn btn-danger">
+                                    حذف
+                                </a>
+                            }
+                            @if (item.IsRemoved)
+                            {
+                                <a asp-action="GetRecovery" asp-controller="Articles" asp-route-id="@item.Id" class="btn btn-info">
+                                    بازگردانی
+                                </a>
+                            }
+                           
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+@section Scripts {
+
+    
+    <script>
+        $(document).ready(function () {
+            $(".paginations").click(function () {
+                $("#pageId").val($(this).text());
+                $("#formFilter").submit();
+            })
+        }
+        )
+    </script>
+}

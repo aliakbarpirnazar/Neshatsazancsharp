@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+
+    @if (ViewData["Title"] != null)
+    {
+        <title>@ViewData["Title"] - نشاط سازان</title>
+    }
+    else
+    {
+        <title>نشاط سازان</title>
+    }
+    <meta name="keywords" content="@ViewData["keywords"]" />
+    <meta name="description" content="@ViewData["metaDescription"]" />
+
+
+    <link rel="shortcut icon" href="~/clienttheme/images/favicon.ico" />
+    <link rel="stylesheet" href="~/clienttheme/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="~/clienttheme/styles/fonts.css" />
+    <link rel="stylesheet" href="~/clienttheme/styles/style.css" />
+
+</head>
+<body>
+    
+		@await Component.InvokeAsync("Menu")
+				
+			
+					@RenderBody()	
+
+	
+
+		@await Component.InvokeAsync("Footer")
+	
+
+
+
+
+
+
+    <script src="~/clienttheme/swiper/swiper-bundle.min.js"></script>
+    <script src="~/clienttheme/js/script.js"></script>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            autoplay: {
+                delay: 5000,
+                reversDirection: true,
+            }, loop: true,
+        });
+    </script>
+    <script>
+
+    </script>
+    <script>
+        var swiper = new Swiper(".mySwiper-news-img", {
+            effect: "cards",
+            grabCursor: true,
+            navigation: {
+                nextEl: ".news-button-next",
+                prevEl: ".news-button-prev",
+            }, allowTouchMove: false,
+
+            loop: true,
+            autoplay: {
+                delay: 5000,
+                reversDirection: true,
+            },
+        });
+        var swiper1 = new Swiper(".mySwiper-news-text", {
+            navigation: {
+                nextEl: ".news-button-next",
+                prevEl: ".news-button-prev",
+            }, allowTouchMove: false,
+            loop: true,
+            autoplay: {
+                delay: 5000,
+                reversDirection: true,
+            },
+        });
+    </script>
+
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

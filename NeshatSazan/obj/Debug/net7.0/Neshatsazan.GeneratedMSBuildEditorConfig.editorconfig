@@ -1,0 +1,549 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Neshatsazan
+build_property.RootNamespace = Neshatsazan
+build_property.ProjectDir = D:\Project\Train Project\Neshatsazan\NeshatSazan\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\Project\Train Project\Neshatsazan\NeshatSazan
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/administration/Views/Account/AddRole.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5pc3RyYXRpb25cVmlld3NcQWNjb3VudFxBZGRSb2xlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/administration/Views/Account/AddUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5pc3RyYXRpb25cVmlld3NcQWNjb3VudFxBZGRVc2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/administration/Views/Account/EditRole.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5pc3RyYXRpb25cVmlld3NcQWNjb3VudFxFZGl0Um9sZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/administration/Views/Account/EditUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5pc3RyYXRpb25cVmlld3NcQWNjb3VudFxFZGl0VXNlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/administration/Views/Account/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5pc3RyYXRpb25cVmlld3NcQWNjb3VudFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/administration/Views/Account/PasswordUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5pc3RyYXRpb25cVmlld3NcQWNjb3VudFxQYXNzd29yZFVzZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/administration/Views/Account/RolesList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5pc3RyYXRpb25cVmlld3NcQWNjb3VudFxSb2xlc0xpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/administration/Views/Account/SetAccessLevelRole.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5pc3RyYXRpb25cVmlld3NcQWNjb3VudFxTZXRBY2Nlc3NMZXZlbFJvbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/administration/Views/ArticleCategories/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5pc3RyYXRpb25cVmlld3NcQXJ0aWNsZUNhdGVnb3JpZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/administration/Views/ArticleCategories/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5pc3RyYXRpb25cVmlld3NcQXJ0aWNsZUNhdGVnb3JpZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/administration/Views/ArticleCategories/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5pc3RyYXRpb25cVmlld3NcQXJ0aWNsZUNhdGVnb3JpZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/administration/Views/Articles/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5pc3RyYXRpb25cVmlld3NcQXJ0aWNsZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/administration/Views/Articles/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5pc3RyYXRpb25cVmlld3NcQXJ0aWNsZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/administration/Views/Articles/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5pc3RyYXRpb25cVmlld3NcQXJ0aWNsZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/administration/Views/Certificate/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5pc3RyYXRpb25cVmlld3NcQ2VydGlmaWNhdGVcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/administration/Views/Certificate/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5pc3RyYXRpb25cVmlld3NcQ2VydGlmaWNhdGVcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/administration/Views/Certificate/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5pc3RyYXRpb25cVmlld3NcQ2VydGlmaWNhdGVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/administration/Views/Certificate/Recovery.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5pc3RyYXRpb25cVmlld3NcQ2VydGlmaWNhdGVcUmVjb3ZlcnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/administration/Views/ChartDesign/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5pc3RyYXRpb25cVmlld3NcQ2hhcnREZXNpZ25cQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/administration/Views/ChartDesign/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5pc3RyYXRpb25cVmlld3NcQ2hhcnREZXNpZ25cRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/administration/Views/ChartDesign/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5pc3RyYXRpb25cVmlld3NcQ2hhcnREZXNpZ25cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/administration/Views/ChartDesign/Recovery.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5pc3RyYXRpb25cVmlld3NcQ2hhcnREZXNpZ25cUmVjb3ZlcnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/administration/Views/ChartPicture/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5pc3RyYXRpb25cVmlld3NcQ2hhcnRQaWN0dXJlXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/administration/Views/ChartPicture/IndexEn.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5pc3RyYXRpb25cVmlld3NcQ2hhcnRQaWN0dXJlXEluZGV4RW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/administration/Views/Dashboard/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5pc3RyYXRpb25cVmlld3NcRGFzaGJvYXJkXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/administration/Views/Dashboard/Profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5pc3RyYXRpb25cVmlld3NcRGFzaGJvYXJkXFByb2ZpbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/administration/Views/NewsSite/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5pc3RyYXRpb25cVmlld3NcTmV3c1NpdGVcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/administration/Views/NewsSite/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5pc3RyYXRpb25cVmlld3NcTmV3c1NpdGVcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/administration/Views/NewsSite/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5pc3RyYXRpb25cVmlld3NcTmV3c1NpdGVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/administration/Views/NewsSite/IndexSlider.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5pc3RyYXRpb25cVmlld3NcTmV3c1NpdGVcSW5kZXhTbGlkZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/administration/Views/NewsSite/IndexVideo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5pc3RyYXRpb25cVmlld3NcTmV3c1NpdGVcSW5kZXhWaWRlby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/administration/Views/NewsSite/Recovery.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5pc3RyYXRpb25cVmlld3NcTmV3c1NpdGVcUmVjb3ZlcnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/administration/Views/NewsSite/RecoverySlider.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5pc3RyYXRpb25cVmlld3NcTmV3c1NpdGVcUmVjb3ZlcnlTbGlkZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/administration/Views/NewsSite/RecoveryVideo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5pc3RyYXRpb25cVmlld3NcTmV3c1NpdGVcUmVjb3ZlcnlWaWRlby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/administration/Views/NewsSite/SliderCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5pc3RyYXRpb25cVmlld3NcTmV3c1NpdGVcU2xpZGVyQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/administration/Views/NewsSite/SliderEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5pc3RyYXRpb25cVmlld3NcTmV3c1NpdGVcU2xpZGVyRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/administration/Views/NewsSite/VideoCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5pc3RyYXRpb25cVmlld3NcTmV3c1NpdGVcVmlkZW9DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/administration/Views/NewsSite/VideoEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5pc3RyYXRpb25cVmlld3NcTmV3c1NpdGVcVmlkZW9FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/administration/Views/Podcast/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5pc3RyYXRpb25cVmlld3NcUG9kY2FzdFxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/administration/Views/Podcast/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5pc3RyYXRpb25cVmlld3NcUG9kY2FzdFxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/administration/Views/Podcast/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5pc3RyYXRpb25cVmlld3NcUG9kY2FzdFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/administration/Views/Podcast/Recovery.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5pc3RyYXRpb25cVmlld3NcUG9kY2FzdFxSZWNvdmVyeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/administration/Views/Project/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5pc3RyYXRpb25cVmlld3NcUHJvamVjdFxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/administration/Views/Project/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5pc3RyYXRpb25cVmlld3NcUHJvamVjdFxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/administration/Views/Project/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5pc3RyYXRpb25cVmlld3NcUHJvamVjdFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/administration/Views/Project/IndexSlider.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5pc3RyYXRpb25cVmlld3NcUHJvamVjdFxJbmRleFNsaWRlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/administration/Views/Project/Recovery.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5pc3RyYXRpb25cVmlld3NcUHJvamVjdFxSZWNvdmVyeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/administration/Views/Project/RecoverySlider.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5pc3RyYXRpb25cVmlld3NcUHJvamVjdFxSZWNvdmVyeVNsaWRlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/administration/Views/Project/SliderCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5pc3RyYXRpb25cVmlld3NcUHJvamVjdFxTbGlkZXJDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/administration/Views/Project/SliderEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5pc3RyYXRpb25cVmlld3NcUHJvamVjdFxTbGlkZXJFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/administration/Views/Question/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5pc3RyYXRpb25cVmlld3NcUXVlc3Rpb25cQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/administration/Views/Question/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5pc3RyYXRpb25cVmlld3NcUXVlc3Rpb25cRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/administration/Views/Question/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5pc3RyYXRpb25cVmlld3NcUXVlc3Rpb25cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/administration/Views/Question/Recovery.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5pc3RyYXRpb25cVmlld3NcUXVlc3Rpb25cUmVjb3ZlcnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/administration/Views/Settings/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5pc3RyYXRpb25cVmlld3NcU2V0dGluZ3NcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/administration/Views/Settings/IndexEN.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5pc3RyYXRpb25cVmlld3NcU2V0dGluZ3NcSW5kZXhFTi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/administration/Views/Shared/_Layout_Null.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5pc3RyYXRpb25cVmlld3NcU2hhcmVkXF9MYXlvdXRfTnVsbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/administration/Views/Shared/_Menu.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5pc3RyYXRpb25cVmlld3NcU2hhcmVkXF9NZW51LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/administration/Views/Shared/_SiteMessage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5pc3RyYXRpb25cVmlld3NcU2hhcmVkXF9TaXRlTWVzc2FnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/administration/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5pc3RyYXRpb25cVmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/administration/Views/SiteInfo/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5pc3RyYXRpb25cVmlld3NcU2l0ZUluZm9cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/administration/Views/SiteInfo/IndexEn.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5pc3RyYXRpb25cVmlld3NcU2l0ZUluZm9cSW5kZXhFbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/administration/Views/SlideHeader/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5pc3RyYXRpb25cVmlld3NcU2xpZGVIZWFkZXJcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/administration/Views/SlideHeader/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5pc3RyYXRpb25cVmlld3NcU2xpZGVIZWFkZXJcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/administration/Views/SlideHeader/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5pc3RyYXRpb25cVmlld3NcU2xpZGVIZWFkZXJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/administration/Views/SlideHeader/Recovery.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5pc3RyYXRpb25cVmlld3NcU2xpZGVIZWFkZXJcUmVjb3ZlcnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/administration/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5pc3RyYXRpb25cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/administration/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5pc3RyYXRpb25cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/EN/Views/Home/Article.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRU5cVmlld3NcSG9tZVxBcnRpY2xlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/EN/Views/Home/ArticleCategory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRU5cVmlld3NcSG9tZVxBcnRpY2xlQ2F0ZWdvcnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/EN/Views/Home/CategoryArticle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRU5cVmlld3NcSG9tZVxDYXRlZ29yeUFydGljbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/EN/Views/Home/Certificates.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRU5cVmlld3NcSG9tZVxDZXJ0aWZpY2F0ZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/EN/Views/Home/ClipAndPodcast.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRU5cVmlld3NcSG9tZVxDbGlwQW5kUG9kY2FzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/EN/Views/Home/Company.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRU5cVmlld3NcSG9tZVxDb21wYW55LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/EN/Views/Home/Contact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRU5cVmlld3NcSG9tZVxDb250YWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/EN/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRU5cVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/EN/Views/Home/News.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRU5cVmlld3NcSG9tZVxOZXdzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/EN/Views/Home/NewsSearch.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRU5cVmlld3NcSG9tZVxOZXdzU2VhcmNoLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/EN/Views/Home/Podcast.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRU5cVmlld3NcSG9tZVxQb2RjYXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/EN/Views/Home/Project.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRU5cVmlld3NcSG9tZVxQcm9qZWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/EN/Views/Home/Projects.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRU5cVmlld3NcSG9tZVxQcm9qZWN0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/EN/Views/Shared/Components/EnBlogs/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRU5cVmlld3NcU2hhcmVkXENvbXBvbmVudHNcRW5CbG9nc1xEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/EN/Views/Shared/Components/EnFooter/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRU5cVmlld3NcU2hhcmVkXENvbXBvbmVudHNcRW5Gb290ZXJcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/EN/Views/Shared/Components/EnMenu/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRU5cVmlld3NcU2hhcmVkXENvbXBvbmVudHNcRW5NZW51XERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/EN/Views/Shared/Components/EnNewsSite/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRU5cVmlld3NcU2hhcmVkXENvbXBvbmVudHNcRW5OZXdzU2l0ZVxEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/EN/Views/Shared/Components/EnProject/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRU5cVmlld3NcU2hhcmVkXENvbXBvbmVudHNcRW5Qcm9qZWN0XERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/EN/Views/Shared/Components/EnQuestions/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRU5cVmlld3NcU2hhcmVkXENvbXBvbmVudHNcRW5RdWVzdGlvbnNcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/EN/Views/Shared/Components/EnSiteinfo/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRU5cVmlld3NcU2hhcmVkXENvbXBvbmVudHNcRW5TaXRlaW5mb1xEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/EN/Views/Shared/Components/EnSlider/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRU5cVmlld3NcU2hhcmVkXENvbXBvbmVudHNcRW5TbGlkZXJcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/EN/Views/Shared/Components/EnViewsSite/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRU5cVmlld3NcU2hhcmVkXENvbXBvbmVudHNcRW5WaWV3c1NpdGVcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/EN/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRU5cVmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/EN/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRU5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/EN/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRU5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Views/Home/Article.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBcnRpY2xlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Views/Home/ArticleCategory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBcnRpY2xlQ2F0ZWdvcnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Views/Home/CategoryArticle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDYXRlZ29yeUFydGljbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Views/Home/Certificates.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDZXJ0aWZpY2F0ZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Views/Home/ClipAndPodcast.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDbGlwQW5kUG9kY2FzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Views/Home/Company.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb21wYW55LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Views/Home/Contact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Views/Home/News.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxOZXdzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Views/Home/NewsSearch.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxOZXdzU2VhcmNoLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Views/Home/Podcast.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQb2RjYXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Views/Home/Project.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcm9qZWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Views/Home/Projects.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcm9qZWN0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Views/Identity/LoginByMobile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSWRlbnRpdHlcTG9naW5CeU1vYmlsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Views/Shared/Components/Blogs/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcQmxvZ3NcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Views/Shared/Components/Footer/Default - Copy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcRm9vdGVyXERlZmF1bHQgLSBDb3B5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Views/Shared/Components/Footer/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcRm9vdGVyXERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Views/Shared/Components/Menu/Default - Copy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTWVudVxEZWZhdWx0IC0gQ29weS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Views/Shared/Components/Menu/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTWVudVxEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Views/Shared/Components/NewsSite/Default - Copy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTmV3c1NpdGVcRGVmYXVsdCAtIENvcHkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Views/Shared/Components/NewsSite/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTmV3c1NpdGVcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Views/Shared/Components/Project/Default - Copy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcUHJvamVjdFxEZWZhdWx0IC0gQ29weS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Views/Shared/Components/Project/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcUHJvamVjdFxEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Views/Shared/Components/Questions/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcUXVlc3Rpb25zXERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Views/Shared/Components/Siteinfo/Default - Copy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcU2l0ZWluZm9cRGVmYXVsdCAtIENvcHkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Views/Shared/Components/Siteinfo/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcU2l0ZWluZm9cRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Views/Shared/Components/Slider/Default - Copy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcU2xpZGVyXERlZmF1bHQgLSBDb3B5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Views/Shared/Components/Slider/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcU2xpZGVyXERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Views/Shared/Components/ViewsSite/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcVmlld3NTaXRlXERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Views/Shared/_Layout_Null.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRfTnVsbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Views/Shared/_SiteMessage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TaXRlTWVzc2FnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/administration/Views/Shared/_AdminLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcYWRtaW5pc3RyYXRpb25cVmlld3NcU2hhcmVkXF9BZG1pbkxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = b-qcqr4ld0pl
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Areas/EN/Views/Shared/_enLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRU5cVmlld3NcU2hhcmVkXF9lbkxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = b-ufmzkvqmej
+
+[D:/Project/Train Project/Neshatsazan/NeshatSazan/Views/Shared/Components/_Layout11.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0xheW91dDExLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = b-fvpv3e9tof

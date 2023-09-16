@@ -1,0 +1,216 @@
+﻿@using ServiceLayer.PublicClass
+@inject PanelLayoutScope scope
+@{
+    string RoleName = scope.GetUserRoleName(User.Identity.Name);
+    string UserName = scope.GetUserDisplayName(User.Identity.Name);
+    string PictureName = scope.GetUserPicture(User.Identity.Name);
+    string SiteName =scope.GetSiteName();
+    string SiteLogo = scope.GetSiteLogo();
+}
+
+<!doctype html>
+<html lang="en" dir="rtl" class="color-sidebar sidebarcolor1 color-header headercolor2">
+<head>
+   
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--favicon-->
+    <link rel="icon" href="~/ViewPicture/Icon/IconSite.ico" type="image/x-icon" />
+    <!--plugins-->
+    <link href="~/templates/vertical/assets/plugins/simplebar/css/simplebar.css" rel="stylesheet" />
+    <link href="~/templates/vertical/assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" />
+    <link href="~/templates/vertical/assets/plugins/metismenu/css/metisMenu.min.css" rel="stylesheet" />
+
+    <link href="~/templates/vertical/assets/plugins/vectormap/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
+    <link href="~/templates/vertical/assets/plugins/datatable/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
+    <!-- Bootstrap CSS -->
+    <!-- Base Css Files -->
+    <link href="~/templates/vertical/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/templates/vertical/assets/css/bootstrap-extended.css" rel="stylesheet">
+    <link href="~/templates/vertical/assets/css/app.css" rel="stylesheet">
+    <link href="~/templates/vertical/assets/css/icons.css" rel="stylesheet">
+    <!-- Theme Style CSS -->
+    <link rel="stylesheet" href="~/templates/vertical/assets/css/dark-theme.css" />
+    <link rel="stylesheet" href="~/templates/vertical/assets/css/semi-dark.css" />
+    <link rel="stylesheet" href="~/templates/vertical/assets/css/header-colors.css" />
+    <!-- Custom Files -->
+    <link href="~/AdminTheme/assets/css/persian-datepicker.min.css" rel="stylesheet" />
+    <title>@SiteName - پنل @RoleName</title>
+
+    <link href="~/lib/swal/swal.css" rel="stylesheet" />
+</head>
+
+<body class="rtl">
+    <!--Notification-->
+    <div>
+        <input id="message1" type="hidden" value="@TempData["success"]" />
+        <input id="message2" type="hidden" value="@TempData["error"]" />
+        <input id="message3" type="hidden" value="@TempData["info"]" />
+        <input id="message4" type="hidden" value="@TempData["warning"]" />
+    </div>
+    <!--wrapper-->
+    <div class="wrapper">
+        <!--sidebar wrapper -->
+        <div class="sidebar-wrapper dark-theme" data-simplebar="true">
+            <div class="sidebar-header">
+                <div>
+                    <img src="~/ViewPicture/@SiteLogo" class="logo-icon" alt="logo icon">
+                </div>
+                <div>
+                    <h4 class="logo-text">@SiteName</h4>
+                </div>
+                <div class="toggle-icon ms-auto">
+                    <i class='bx bx-last-page'></i>
+                </div>
+            </div>
+            <!--navigation-->
+            <partial name="_Menu" />
+        
+            <!--end navigation-->
+        </div>
+        <!--end sidebar wrapper -->
+        <!--start header -->
+        <header>
+            <div class="topbar d-flex align-items-center">
+                <nav class="navbar navbar-expand">
+                    <div class="mobile-toggle-menu">
+                        <i class='bx bx-menu'></i>
+                    </div>
+                    <div class="top-menu-left d-none d-lg-block">
+                        <ul class="nav">
+                          
+                        </ul>
+                    </div>
+                    <div class="search-bar flex-grow-1">
+                        <div class="position-relative search-bar-box">
+                            <input type="text" class="form-control search-control" placeholder="جستجو ..."> <span class="position-absolute top-50 search-show translate-middle-y">
+                                <i class='bx bx-search'></i>
+                            </span>
+                            <span class="position-absolute top-50 search-close translate-middle-y">
+                                <i class='bx bx-x'></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="top-menu ms-auto">
+                        <ul class="navbar-nav align-items-center">
+                        </ul>
+                    </div>
+                    <div class="user-box dropdown">
+                        <a class="d-flex align-items-center nav-link dropdown-toggle dropdown-toggle-nocaret" href="#"
+                           role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="~/ViewPicture/@PictureName" class="user-img" alt="user avatar">
+                            <div class="user-info ps-3">
+                                <p class="user-name mb-0">@UserName</p>
+                                <p class="user-name mb-0">@RoleName</p>
+                            </div>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                         <li>
+                                <a class="dropdown-item" asp-action="Profile" asp-controller="Dashboard" asp-route-userName="@User.Identity.Name">
+                                    <i class="bx bx-user"></i><span>پروفایل</span>
+                                </a>
+                            </li>                        
+                            <li>
+                                <div class="dropdown-divider mb-0"></div>
+                            </li>
+                        
+                            <li>
+                                <a class="dropdown-item" href="/LogOut">
+                                    <i class='bx bx-log-out-circle'></i><span>خروج</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>                  
+                </nav>
+            </div>
+        </header>
+        <!--end header -->
+        <!--start page wrapper -->
+        <div class="page-wrapper">
+            <div class="page-content">
+
+                @RenderBody()
+
+            </div>
+        </div>
+        <!--end page wrapper -->
+        <!--start overlay-->
+        <div class="overlay toggle-icon"></div>
+        <!--end overlay-->
+        <!--Start Back To Top Button--> <a href="javaScript:;" class="back-to-top">
+            <i class='bx bxs-up-arrow-alt'></i>
+        </a>
+        <!--End Back To Top Button-->
+        <footer class="page-footer">
+            <p class="mb-0"> طراحی شده توسط علی اکبر پیرنظر.</p>
+        </footer>
+    </div>
+
+    <div id="MainModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content" id="ModalContent">
+            </div>
+        </div>
+    </div>
+
+    <!--end wrapper-->
+    <!-- Bootstrap JS -->
+    <script src="~/templates/vertical/assets/js/bootstrap.bundle.min.js"></script>
+
+    <!--plugins-->
+    <script src="~/templates/vertical/assets/js/jquery.min.js"></script>
+    <script src="~/templates/vertical/assets/plugins/simplebar/js/simplebar.min.js"></script>
+    <script src="~/templates/vertical/assets/plugins/metismenu/js/metisMenu.min.js"></script>
+    <script src="~/templates/vertical/assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js"></script>
+    <script src="~/templates/vertical/assets/plugins/vectormap/jquery-jvectormap-2.0.2.min.js"></script>
+    <script src="~/templates/vertical/assets/plugins/vectormap/jquery-jvectormap-world-mill-en.js"></script>
+    <script src="~/templates/vertical/assets/plugins/datatable/js/jquery.dataTables.min.js"></script>
+    <script src="~/templates/vertical/assets/plugins/datatable/js/dataTables.bootstrap5.min.js"></script>
+    <script src="~/templates/vertical/assets/js/index3.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#example').DataTable();
+        });
+    </script>
+   
+    <script>
+        new PerfectScrollbar('.best-selling-products');
+        new PerfectScrollbar('.recent-reviews');
+        new PerfectScrollbar('.support-list');
+    </script>
+    <!--app JS-->
+    <script src="~/templates/vertical/assets/js/app.js"></script>
+
+
+
+
+    <script src="~/AdminTheme/assets/js/persian-date.min.js"></script>
+    <script src="~/AdminTheme/assets/js/persian-datepicker.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- signalR -->
+    <script src="~/js/myFunctions.js"></script>
+
+    <script src="~/js/site.js"></script>
+
+
+    <script>
+        $('.persianDateInput').persianDatepicker({
+            format: 'YYYY/MM/DD',
+            autoClose: true,
+            initialValueType: "persian"
+        });
+    </script>
+
+    <script src="https://cdn.tiny.cloud/1/03bywyfc22f080o11wndvso5su892zkphj49li728tkw9f3f/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+  
+    <partial name="_SiteMessage" />
+
+
+    @RenderSection("Scripts",false)
+
+</body>
+
+
+</html>

@@ -1,0 +1,94 @@
+﻿@model ServiceLayer.ViewModels.Client.Farsi.Menu.MenuViewModel
+
+
+
+<header>
+    <div>
+        <img class="logo" src="~/clienttheme/images/logo-white.svg" alt="Neshatsazan logo" />
+    </div>
+    <nav>
+        <ul class="header-ul">
+            <li>
+                <a href="/home/index">خانه</a>
+            </li>
+            <li>
+                <a href="/home/Projects">پروژه ها</a>
+            </li>
+            <li>
+                <a href="/home/News">اخبار </a>
+            </li>
+            <li class="more-menu show-more-menu" id="show-more-article">
+                <a href="/home/CategoryArticle">مقالات</a>
+                <img src="~/clienttheme/images/down-arrow-svgrepo-com.svg" />
+                <ul>
+                     @foreach (var item in Model.ArticleCategory)
+                                                {
+                        <li><a asp-action="ArticleCategory" asp-controller="Home" asp-route-Slug="@item.Slug">  @item.Name </a></li>
+                                                }
+                </ul>
+            </li>
+            <li>
+                <a href="/home/Company">تماس با ما</a>
+            </li>
+            <li class="more-menu show-more-menu" id="show-more-menu">
+                <a href="#">بیش‌تر</a>
+                <img src="~/clienttheme/images/down-arrow-svgrepo-com.svg" />
+                <ul>
+                    <li><a href="/home/Certificates">افتخارات‌ و گواهینامه‌ها</a></li>
+                    <li><a href="/home/ClipAndPodcast">کلیپ‌ها‌ و‌ پادکست‌ها</a></li>
+                </ul>
+            </li>
+            <li class="more-menu show-more-menu" id="show-more-lang">
+                <a href="#">
+                    <img src="~/clienttheme/images/blank.gif" class="lang lang-ir" alt="farsi" />
+                    <span>
+                        فارسی
+                    </span>
+                </a>
+                <img src="~/clienttheme/images/down-arrow-svgrepo-com.svg" />
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="~/clienttheme/images/blank.gif" class="lang lang-us" alt="English" />
+                            <span>
+                                English
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <img src="~/clienttheme/images/hamburger.svg" class="hamburger-icon" alt="hamburger menu" />
+    <div class="hamburger-menu">
+        <div class="cross-icon">
+            <img src="~/clienttheme/images/cross.svg" />
+        </div>
+        <div class="hamburger-menu-items">
+            <ul>
+                <li>
+                    <a href="/home/index">خانه</a>
+                </li>
+                <li>
+                    <a href="/home/News">اخبار </a>
+                </li>
+                <div></div>
+                <li>
+                    <a href="/home/Projects">پروژه ها</a>
+                </li>
+                <li>
+                    <a href="/home/CategoryArticle">مقالات</a>
+                </li>
+                <li>
+                    <a href="/home/Company">تماس با ما</a>
+                </li>
+            </ul>
+        </div>
+        <div class="more-item">
+            <a href="#">Go to English</a>
+            <img src="~/clienttheme/images/arrow.svg" />
+        </div>
+    </div>
+
+</header>
+

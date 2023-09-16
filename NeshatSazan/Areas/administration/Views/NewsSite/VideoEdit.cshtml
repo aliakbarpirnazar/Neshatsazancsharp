@@ -1,0 +1,76 @@
+﻿@model ServiceLayer.ViewModels.Admin.VideoNewsSiteViewModels.EditVideoNewsSiteViewModel
+@{
+    Layout = "~/areas/administration/views/shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "ویرایش ویدیو ";
+}
+
+
+<div class="card">
+    <div class="modal-header">
+        <h4 class="modal-title">@ViewData["Title"] : @Model.Title</h4>
+    </div>
+
+    <form asp-action="VideoEdit" asp-controller="NewsSite"
+          method="post"
+          data-action="Refresh"
+          enctype="multipart/form-data">
+        <div class="modal-body">
+            <input hidden asp-for="@Model.Id" />
+            <input hidden asp-for="@Model.NewsSiteId" />
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label asp-for="Title" class="form-label"></label>
+                        <input type="text" class="form-control" id="Name1" asp-for="Title" onchange="makeSlug('Name1', 'Slug')">
+                        <span asp-validation-for="Title" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label asp-for="Slug" class="form-label"></label>
+                        <input type="text" class="form-control" asp-for="Slug">
+                        <span asp-validation-for="Slug" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label asp-for="video" class="form-label"></label>
+                        <input type="file" class="form-control" asp-for="video" accept="video/*">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <video controls width="350" height="350">
+                            <source src="~/ViewPicture/@Model.videoStr">
+                        </video>
+                        @*<video src="~/Viewvideo/@Model.videoStr" width="150" height="150" />*@
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label asp-for="VideoAlt" class="form-label"></label>
+                        <input type="text" class="form-control" asp-for="VideoAlt">
+                        <span asp-validation-for="VideoAlt" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label asp-for="videoTitle" class="form-label"></label>
+                        <input type="text" class="form-control" asp-for="videoTitle">
+                        <span asp-validation-for="videoTitle" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-info waves-effect waves-light">ویرایش</button>
+        </div>
+    </form>
+</div>

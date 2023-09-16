@@ -1,0 +1,50 @@
+﻿@model ServiceLayer.ViewModels.Admin.SliderNewsSiteViewModels.CreateSliderNewsSiteViewModel
+
+@{
+    Layout = "~/areas/administration/views/shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "ایجاد عکس جدید";
+}
+<div class="card">
+    <div class="modal-header">
+        <h4 class="modal-title">@ViewData["Title"]</h4>
+    </div>
+
+<form asp-action="SliderCreate" asp-controller="NewsSite"
+      method="post"
+      data-action="Refresh"
+      enctype="multipart/form-data">
+    <div class="modal-body">   
+        <div class="row">
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label asp-for="Picture" class="form-label"></label>
+                    <input type="file" class="form-control" asp-for="Picture" accept="image/*">
+                    <span asp-validation-for="Picture" class="text-danger"></span>
+                </div>
+            </div>         
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label asp-for="PictureAlt" class="form-label"></label>
+                    <input type="text" class="form-control" asp-for="PictureAlt">
+                    <span asp-validation-for="PictureAlt" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label asp-for="PictureTitle" class="form-label"></label>
+                    <input type="text" class="form-control" asp-for="PictureTitle">
+                    <span asp-validation-for="PictureTitle" class="text-danger"></span>
+                </div>
+            </div>
+        </div>     
+        <input hidden asp-for="@Model.NewsSiteId" value="@ViewBag.Id" />
+
+
+    </div>
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-info waves-effect waves-light">ایجاد</button>
+    </div>
+</form>
+</div>

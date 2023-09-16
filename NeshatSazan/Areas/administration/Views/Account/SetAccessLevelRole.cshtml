@@ -1,0 +1,61 @@
+﻿@model List<ServiceLayer.ViewModels.Admin.IdentityViewModels.LsitRolePermission>
+@{
+    ViewData["Title"] = "تعیین سطح دسترسی";
+    Layout = "~/Areas/administration/Views/Shared/_AdminLayout.cshtml";
+    long RoleId = ViewBag.MyId;
+}
+<div class="card px-2">
+    <div class="modal-header">
+        <h4 class="modal-title">@ViewData["Title"]</h4>
+    </div>
+
+    <div class="s12 m2 l2 mt-3">
+
+        @foreach (var item in Model.Where(x => x.ParentId == null))
+        {
+            <div class="col-md-12 ">
+                <h8 class="modal-title pb-3">تعیین @item.Title</h8>
+                <br />
+                <div class="form-check form-check-inline form-switch ">
+                    <label class="form-check-label" for="@item.Id">
+                        @item.Title
+                    </label>
+                    <input class="form-check-input" type="checkbox" onchange="updateIsActive(@item.Id, @RoleId,this.checked)" @(item.IsActive ? "checked" : "") id="@item.Id">
+
+
+                </div>
+                @foreach (var parent in Model.Where(x => x.ParentId == item.Id))
+                {
+                    <div class="form-check form-check-inline form-switch ">
+                        <label class="form-check-label" for="@parent.Id">
+                            @parent.Title
+                        </label>
+                        <input class="form-check-input" onchange="updateIsActive(@parent.Id, @RoleId,this.checked)" @(parent.IsActive ? "checked" : "") type="checkbox" id="@parent.Id">
+                    </div>
+                }
+            </div>
+            <hr />
+        }
+    </div>
+
+</div>
+
+@section Scripts
+    {
+    <script>
+        function updateIsActive(id, roleId, IsActive) {
+            var data = { id: id, roleId: roleId, IsActive: IsActive };
+            $.ajax({
+                type: "POST",
+                url: "/Administration/Account/SetAccessLevelRole",
+                data: data,
+                success: function (response) {
+                    // اطلاعات با موفقیت به روزرسانی شد
+                },
+                error: function (error) {
+                    // خطا در به روزرسانی اطلاعات
+                }
+            });
+        }
+    </script>
+}

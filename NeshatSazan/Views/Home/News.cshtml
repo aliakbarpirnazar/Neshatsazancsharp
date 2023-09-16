@@ -1,0 +1,53 @@
+﻿@using ServiceLayer.ViewModels.Client.Farsi
+@model List<NewsSiteViewModel>
+
+@{
+	Layout = "~/Views/Shared/_Layout.cshtml";
+	ViewData["Title"] = "اخبار";
+}
+
+<section class="page-header page-header-modern page-header-background page-header-background-sm overlay overlay-color-primary section overlay-show overlay-op-8 mb-5">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 align-self-center p-static order-2 text-center">
+				<h1 class="mb-n2">@ViewData["Title"]</h1>
+			</div>
+			<div class="col-md-12 align-self-center order-1">
+				<ul class="breadcrumb breadcrumb-light d-block text-center">
+					<li><a href="/Home/Index">خانه</a></li>
+					<li class="active">@ViewData["Title"]</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>
+
+@if (Model.Count != 0)
+{
+		<div class="container">
+			
+			<div class="row pb-3 pb-lg-0">
+
+				@foreach (var item in Model)
+				{
+					<div class="col-lg-3">
+						<div class="recent-posts mt-4">
+						<a asp-action="NewsSearch" asp-controller="Home" asp-route-slug="@item.Slug">
+								<img class=" pb-3" src="~/ViewPicture/@item.Picture" alt="@item.PictureAlt" title="@item.PictureTitle" width="250" height="140">
+							</a>
+							<article class="post">
+								<div class="post-date">
+									<span class="day">@item.StartDay</span>
+									<span class="month">@item.StartMonth</span>
+								</div>
+							<h4 class="mb-1"><a class="text-color-dark" asp-action="NewsSearch" asp-controller="Home" asp-route-slug="@item.Slug">@item.Title</a></h4>
+								<p class="mb-3">@item.MetaDescription</p>
+							<a asp-action="NewsSearch" asp-controller="Home" asp-route-slug="@item.Slug">بیشتر بخوانید <i class="fas fa-long-arrow-alt-left align-middle"></i></a>
+							</article>
+						</div>
+					</div>
+				}
+
+			</div>
+		</div>
+}

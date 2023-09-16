@@ -1,0 +1,28 @@
+﻿@model ServiceLayer.ViewModels.Client.Farsi.SiteInfViewModel
+@{
+	ViewData["metaDescription"] = @Model.MetaDescription;
+}
+
+<section class="online-payment solid-radious">
+    <div class="section-text">
+        <h3>@Model.Qusetion</h3>
+        <p>
+            @Model.MetaDescription
+        </p>
+    </div>
+    <div>
+        <img src="~/clienttheme/images/dotted-line-angle.png" alt="dotted-line-angle" class="section-dot-img" />
+    </div>
+    <div>
+        <p>
+            @Model.ShortDescription)
+        </p>
+        <div class="section-links">
+            <a href="/Home/Company" class="second-button">
+                آشنایی بیشتر
+                <img src="./images/arrow.svg" />
+            </a>
+        </div>
+    </div>
+</section>
+

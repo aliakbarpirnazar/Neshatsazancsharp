@@ -1,0 +1,59 @@
+﻿@model ServiceLayer.ViewModels.Admin.IdentityViewModels.EditUserViewModel
+
+@{
+    Layout = "~/areas/administration/views/shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "ویرایش";
+}
+<div class="card">
+    <div class="modal-header">
+        <h4 class="modal-title">@ViewData["Title"]</h4>
+    </div>
+
+    <form asp-action="EditUser" asp-controller="Account"
+          method="post"
+          enctype="multipart/form-data">
+        <div class="modal-body">
+            <input hidden asp-for="Id" />
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label asp-for="RoleId">گروه مقاله</label>
+                    <select class="form-select" asp-for="RoleId" asp-items='new SelectList(Model.Roles,"Id","Title")'>
+                        <option value="0">انتخاب نقش</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label asp-for="DisplayName" class="form-label"></label>
+                        <input type="text" class="form-control" asp-for="DisplayName">
+                        <span asp-validation-for="DisplayName" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label asp-for="PhoneNumber" class="form-label"></label>
+                        <input type="text" class="form-control" asp-for="PhoneNumber">
+                        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-info waves-effect waves-light">ویرایش</button>
+        </div>
+    </form>
+</div>
+
+@section Scripts{
+
+    <script src="~/ckeditor/ckeditor.js"></script>
+    <script src="~/ckeditor/adapters/jquery.js"></script>
+    <script>
+        $(function () {
+            $('#Answer').ckeditor();
+        });
+    </script>
+}
+

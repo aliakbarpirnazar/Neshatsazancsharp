@@ -1,0 +1,95 @@
+﻿@using ServiceLayer.ViewModels.Admin.VideoNewsSiteViewModels
+@using ServiceLayer.ViewModels
+@model List<ListVideoNewsSiteViewModel>
+@{
+    ViewData["Title"] = "لیست ویدیو خبر";
+    Layout = "~/Areas/administration/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+    <div class="pe-3"><h4 class="page-title">@ViewData["title"]  : @ViewBag.TitleNewsSite</h4></div>
+
+    <div class="ms-auto">
+        <a class="btn btn-success btn-lg" href="/Administration/NewsSite/VideoCreate/@ViewBag.Id" >ایجاد  </a>
+    </div>
+</div>
+<hr />
+<div class="card">
+    <div class="card-header">
+        <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+
+            <div class="ms-auto">
+                <a class="btn btn-info " href="/Administration/NewsSite/IndexVideo/@ViewBag.Id">نمایش همه</a>
+                <a class="btn btn-danger " href="/Administration/NewsSite/RecoveryVideo/@ViewBag.Id">نمایش حذف شده ها</a>
+            </div>
+        </div>
+
+    </div>
+    <div class="card-body">
+        <table class="table mb-0 table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">عنوان</th>
+                    <th scope="col">تاریخ ثبت</th>
+                    <th scope="col">حذف شده</th>
+                    <th scope="col">عملیات</th>
+                </tr>
+            </thead>
+            <tbody>
+
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <th scope="row">@item.Id</th>
+                        <th>@item.Title</th>
+                        <th>@item.CreationDate</th>
+                        <td>
+
+                            @if (!item.IsRemoved)
+                            {
+                                <p class="text-success">موجود</p>
+                            }
+                            @if (item.IsRemoved)
+                            {
+                                <p class="text-danger">حذف شده</p>
+                            }
+                        </td>
+                        <td>
+                            <a href="/Administration/NewsSite/VideoEdit/@item.Id" class="btn btn-warning">
+                                ویرایش
+                            </a>
+                            <a asp-action="VideoDelete" asp-controller="NewsSite" asp-route-id="@item.Id" class="btn btn-danger">
+                                حذف
+                            </a>
+
+                        </td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+
+
+</div>
+
+
+
+
+
+@section Scripts{
+   
+
+    <script>
+        $(document).ready(function () {
+            $(".paginations").click(function () {
+                $("#pageId").val($(this).text());
+                $("#formFilter").submit();
+            })
+        }
+        )
+    </script>
+                }

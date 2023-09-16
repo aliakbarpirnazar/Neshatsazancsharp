@@ -1,0 +1,156 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    @if (ViewData["Title"] != null)
+    {
+        <title>@ViewData["Title"] - NeshatSazan</title>
+    }
+    else
+    {
+        <title>NeshatSazan</title>
+    }
+    <meta name="keywords" content="@ViewData["keywords"]" />
+    <meta name="description" content="@ViewData["metaDescription"]" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="~/ViewPicture/Icon/IconSite.ico" type="image/x-icon">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+
+    <!-- Web Fonts  -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light" rel="stylesheet" type="text/css">
+
+    <!-- Vendor CSS -->
+    <link rel="stylesheet" href="~/portoEn/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/portoEn/vendor/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="~/portoEn/vendor/animate/animate.min.css">
+    <link rel="stylesheet" href="~/portoEn/vendor/simple-line-icons/css/simple-line-icons.min.css">
+    <link rel="stylesheet" href="~/portoEn/vendor/owl.carousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/portoEn/vendor/owl.carousel/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="~/portoEn/vendor/magnific-popup/magnific-popup.min.css">
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="~/portoEn/css/theme.css">
+    <link rel="stylesheet" href="~/portoEn/css/theme-elements.css">
+    <link rel="stylesheet" href="~/portoEn/css/theme-blog.css">
+    <link rel="stylesheet" href="~/portoEn/css/theme-shop.css">
+
+    <!-- Current Page CSS -->
+    <link rel="stylesheet" href="~/portoEn/vendor/rs-plugin/css/settings.css">
+    <link rel="stylesheet" href="~/portoEn/vendor/rs-plugin/css/layers.css">
+    <link rel="stylesheet" href="~/portoEn/vendor/rs-plugin/css/navigation.css">
+    <link rel="stylesheet" href="~/portoEn/vendor/nivo-slider/nivo-slider.css">
+    <link rel="stylesheet" href="~/portoEn/vendor/nivo-slider/themes/default/default.css">
+
+    <!-- Demo CSS -->
+    <link rel="stylesheet" href="~/portoEn/css/demos/demo-construction.css">
+
+    <!-- Skin CSS -->
+    <link rel="stylesheet" href="~/portoEn/css/skins/skin-construction.css">
+
+    <!-- Theme Custom CSS -->
+    <link rel="stylesheet" href="~/portoEn/css/custom.css">
+
+    <!-- Head Libs -->
+    <script src="~/portoEn/vendor/modernizr/modernizr.min.js"></script>
+
+
+</head>
+
+<body data-spy="scroll" data-target="#sidebar" data-offset="120">
+    <div class="loading-overlay">
+        <div class="bounce-loader">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+
+    <div class="body">
+        @await Component.InvokeAsync("EnMenu")
+
+        <div role="main" class="main">
+
+            @RenderBody()
+
+
+        </div>
+
+        @await Component.InvokeAsync("EnFooter")
+
+
+    </div>
+
+
+
+
+
+    <!-- Vendor -->
+    <script src="~/portoEn/vendor/jquery/jquery.min.js"></script>
+    <script src="~/portoEn/vendor/jquery.appear/jquery.appear.min.js"></script>
+    <script src="~/portoEn/vendor/jquery.easing/jquery.easing.min.js"></script>
+    <script src="~/portoEn/vendor/jquery.cookie/jquery.cookie.min.js"></script>
+    <script src="~/portoEn/vendor/popper/umd/popper.min.js"></script>
+    <script src="~/portoEn/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/portoEn/vendor/common/common.min.js"></script>
+    <script src="~/portoEn/vendor/jquery.validation/jquery.validate.min.js"></script>
+    <script src="~/portoEn/vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
+    <script src="~/portoEn/vendor/jquery.gmap/jquery.gmap.min.js"></script>
+    <script src="~/portoEn/vendor/jquery.lazyload/jquery.lazyload.min.js"></script>
+    <script src="~/portoEn/vendor/isotope/jquery.isotope.min.js"></script>
+    <script src="~/portoEn/vendor/owl.carousel/owl.carousel.min.js"></script>
+    <script src="~/portoEn/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="~/portoEn/vendor/vide/jquery.vide.min.js"></script>
+    <script src="~/portoEn/vendor/vivus/vivus.min.js"></script>
+
+    <!-- Theme Base, Components and Settings -->
+    <script src="~/portoEn/js/theme.js"></script>
+
+    <!-- Current Page Vendor and Views -->
+    <script src="~/portoEn/vendor/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+    <script src="~/portoEn/vendor/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+
+    <!-- Current Page Vendor and Views -->
+    <script src="~/portoEn/vendor/nivo-slider/jquery.nivo.slider.min.js"></script>
+    <script src="~/portoEn/js/views/view.contact.js"></script>
+
+    <!-- Demo -->
+    <script src="~/portoEn/js/demos/demo-construction.js"></script>
+
+    <!-- Theme Custom -->
+    <script src="~/portoEn/js/custom.js"></script>
+
+    <!-- Theme Initialization Files -->
+    <script src="~/portoEn/js/theme.init.js"></script>
+
+
+
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
+
+    <!-- Google Analytics: Change UA-XXXXX-X to be your site's ID. Go to http://www.google.com/analytics/ for more information.
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-12345678-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+     -->
+
+
+    <script src="~/js/signalr.js"></script>
+    <script src="~/js/signalRView.js"></script>
+
+    @RenderSection("Scripts",false)
+
+</body>
+
+
+</html>

@@ -1,0 +1,86 @@
+﻿@model ServiceLayer.ViewModels.Admin.PodcastViewModels.CreatePodcastViewModel
+
+@{
+    Layout = "~/areas/administration/views/shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "ایجاد کلیپ یا پادکست جدید";
+}
+<div class="card">
+    <div class="modal-header">
+        <h4 class="modal-title">@ViewData["Title"]</h4>
+    </div>
+
+    <form asp-action="Create" asp-controller="Podcast"
+          method="post"
+          data-action="Refresh"
+          enctype="multipart/form-data">
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label asp-for="Language" class="form-label">انمتخاب زبان</label>
+                        <select type="text" class="form-select" asp-for="Language">
+                            <option value="0">فارسی</option>
+                            <option value="1">انگلیسی</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label asp-for="Title" class="form-label"></label>
+                        <input type="text" class="form-control" id="Name1" asp-for="Title" onchange="makeSlug('Name1', 'Slug')">
+                        <span asp-validation-for="Title" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label asp-for="Slug" class="form-label"></label>
+                        <input type="text" class="form-control" asp-for="Slug">
+                        <span asp-validation-for="Slug" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label asp-for="Picture" class="form-label"></label>
+                        <input type="file" class="form-control" asp-for="Picture" accept="Image/*">
+                        <span asp-validation-for="Picture" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label asp-for="Video" class="form-label"></label>
+                        <input type="file" class="form-control" asp-for="Video" accept="video/*">
+                        <span asp-validation-for="Video" class="text-danger"></span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label asp-for="PictureAlt" class="form-label"></label>
+                        <input type="text" class="form-control" asp-for="PictureAlt">
+                        <span asp-validation-for="PictureAlt" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label asp-for="PictureTitle" class="form-label"></label>
+                        <input type="text" class="form-control" asp-for="PictureTitle">
+                        <span asp-validation-for="PictureTitle" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-info waves-effect waves-light">ایجاد</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,120 @@
+﻿@model DataLayer.Models.ProjectManagement.Project
+@{
+	Layout = "~/areas/EN/views/shared/_enLayout.cshtml";
+    ViewData["Title"] = "Projects ";
+	ViewData["keywords"] = @Model.Keywords;
+}
+<section class="page-header page-header-modern page-header-background page-header-background-sm overlay section overlay-color-primary overlay-show overlay-op-8 mb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 align-self-center p-static order-2 text-center">
+                <h1 class="mb-n2">@ViewData["Title"] : @Model.Title </h1>
+            </div>
+            <div class="col-md-12 align-self-center order-1">
+                <ul class="breadcrumb breadcrumb-light d-block text-center">
+                    <li><a href="/En/Home/Index">Home</a></li>
+                    <li><a href="/En/Home/Projects"> Projects</a></li>
+                    <li class="active">@Model.Title </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container">
+	<div class="row mb-4">
+		<div class="col-lg-4 mb-2">
+			<div class="thumb-gallery">
+				<div class="lightbox" data-plugin-options="{'delegate': 'a', 'type': 'image', 'gallery': {'enabled': true}}">
+					<div class="owl-carousel owl-theme manual thumb-gallery-detail show-nav-hover" id="thumbGalleryDetail">
+						@foreach (var item in Model.sliderProjects)
+						{
+							
+						<div>
+							<a href="~/ViewPicture/@item.Picture">
+								<span class="thumb-info thumb-info-centered-info thumb-info-no-borders text-4">
+									<span class="thumb-info-wrapper text-4">
+											<img alt="@item.PictureAlt" src="~/ViewPicture/@item.Picture" title="@item.PictureTitle" class="img-fluid">
+										<span class="thumb-info-title text-4">
+											<span class="thumb-info-inner text-4 line-height-1 mb-n1"><i class="icon-magnifier icons text-4"></i></span>
+										</span>
+									</span>
+								</span>
+							</a>
+						</div>			
+						}
+						
+					</div>
+				</div>
+
+				
+			</div>
+		</div>
+		<div class="col-lg-8">
+
+			<div class="project-detail-construction">
+
+				<p>@Model.Title</p>
+
+				<div class="row">
+					<div class="col-lg-6">
+
+						<ul class="list-project-details">
+							<li>
+								<label>Project location:</label>
+								<p><a href="@Model.LinkLocation">@Model.AddressLocation</a></p>
+							</li>
+							<li>
+								<label>Type of structure:</label>
+								<p>@Model.TypeStructureProject</p>
+							</li>
+							<li>
+								<label>the budget :</label>
+								<p>@Model.BudgetProject Toman</p>
+							</li>
+							<li>
+								<label>contract type:</label>
+								<p>@Model.TypeContract</p>
+							</li>
+							<li>
+								<label>start date:</label>
+								<p>@ViewBag.startDate</p>
+							</li>
+						</ul>
+					</div>
+					<div class="col-lg-6">
+
+						<ul class="list-project-details">
+							<li>
+								<label>Number of units :</label>
+								<p>@Model.NumberUnit</p>
+							</li>
+							<li>
+								<label> the presenter:</label>
+								<p>@Model.PresenterProject</p>
+							</li>
+							<li>
+								<label>owner :</label>
+								<p>@Model.OwnerProject</p>
+							</li>
+							<li>
+								<label>Useful area :</label>
+								<p>@Model.Usefularea</p>
+							</li>
+
+							<li>
+								<label>Completion Date:</label>
+								<p>@ViewBag.EndDate</p>
+							</li>
+						</ul>
+					</div>
+					
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+</div>
+
+

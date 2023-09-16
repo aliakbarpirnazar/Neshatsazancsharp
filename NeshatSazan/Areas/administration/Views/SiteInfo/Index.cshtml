@@ -1,0 +1,190 @@
+﻿@model ServiceLayer.ViewModels.Admin.SiteInfoViewModels.SiteInfoViewModel
+
+@{
+    Layout = "~/areas/administration/views/shared/_AdminLayout.cshtml";
+    ViewData["title"] = "اطلاعات تکمیلی سایت";
+}
+
+
+<div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+    <div class="pe-3"><h4 class="page-title">@ViewData["title"]</h4></div>
+
+    <div class="ms-auto">
+        <a class="btn btn-success btn-lg" asp-action="IndexEN" asp-controller="SiteInfo"> اطلاعات انگلیسی </a>
+    </div>
+</div>
+<hr />
+
+<div class="card">
+    <form asp-action="UpdateSiteInfo" asp-controller="SiteInfo"
+          method="post"
+          data-action="Refresh"
+          enctype="multipart/form-data">
+        <div class="modal-body">
+            <input hidden asp-for="Language" />
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label asp-for="TelNumber" class="form-label"></label>
+                        <input type="text" class="form-control" id="Name1" asp-for="TelNumber">
+                        <span asp-validation-for="TelNumber" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label asp-for="TimeRun" class="form-label"></label>
+                        <input type="text" class="form-control" asp-for="TimeRun">
+                        <span asp-validation-for="TimeRun" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="mb-3 no-margin">
+                        <label asp-for="Address" class="form-label"></label>
+                        <textarea type="text" rows="3" class="form-control" asp-for="Address"></textarea>
+                        <span asp-validation-for="Address" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="mb-3 no-margin">
+                        <label asp-for="LinkLocation" class="form-label"></label>
+                        <textarea type="text" rows="3" class="form-control" asp-for="LinkLocation"></textarea>
+                        <span asp-validation-for="LinkLocation" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="mb-3 no-margin">
+                        <label asp-for="Linkinstagram" class="form-label"></label>
+                        <textarea type="text" rows="1" class="form-control" asp-for="Linkinstagram"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="mb-3 no-margin">
+                        <label asp-for="LinkTelegram" class="form-label"></label>
+                        <textarea type="text" rows="1" class="form-control" asp-for="LinkTelegram"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="mb-3 no-margin">
+                        <label asp-for="LinkWhatsApp" class="form-label"></label>
+                        <textarea type="text" rows="1" class="form-control" asp-for="LinkWhatsApp"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label asp-for="Picture" class="form-label"></label>
+                        <input type="file" class="form-control" asp-for="Picture" accept="image/*">
+                        <span asp-validation-for="Picture" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="PictureAlt" class="form-label"></label>
+                        <input type="text" class="form-control" asp-for="PictureAlt">
+                        <span asp-validation-for="PictureAlt" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="PictureTitle" class="form-label"></label>
+                        <input type="text" class="form-control" asp-for="PictureTitle">
+                        <span asp-validation-for="PictureTitle" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <img src="~/ViewPicture/@Model.PictureStr" width="390" height="280">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label asp-for="Qusetion" class="form-label"></label>
+                        <input type="text" class="form-control" asp-for="Qusetion">
+                        <span asp-validation-for="Qusetion" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="mb-3 no-margin">
+                        <label asp-for="ShortDescription" class="form-label"></label>
+                        <textarea type="text" class="form-control" rows="4" asp-for="ShortDescription"></textarea>
+                        <span asp-validation-for="ShortDescription" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="mb-3 no-margin">
+                        <label asp-for="MetaDescription" class="form-label"></label>
+                        <textarea type="text" class="form-control" rows="3" asp-for="MetaDescription"></textarea>
+                        <span asp-validation-for="MetaDescription" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="mb-3 no-margin">
+                        <label asp-for="Description" class="form-label"></label>
+                        <textarea type="text" class="form-control" rows="3" asp-for="Description"></textarea>
+                        <span asp-validation-for="Description" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="mb-3 no-margin">
+                        <label asp-for="MissionCompany" class="form-label"></label>
+                        <textarea type="text" class="form-control" rows="3" asp-for="MissionCompany"></textarea>
+                        <span asp-validation-for="MissionCompany" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="mb-3 no-margin">
+                        <label asp-for="VisionCompany" class="form-label"></label>
+                        <textarea type="text" class="form-control" rows="3" asp-for="VisionCompany"></textarea>
+                        <span asp-validation-for="VisionCompany" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-info waves-effect waves-light">بروز رسانی</button>
+        </div>
+    </form>
+
+</div>
+
+@section Scripts{
+
+    <script src="~/ckeditor/ckeditor.js"></script>
+    <script src="~/ckeditor/adapters/jquery.js"></script>
+    <script>
+        $(function () {
+            $('#Description').ckeditor();
+        });
+    </script>
+    <script>
+        $(function () {
+            $('#VisionCompany').ckeditor();
+        });
+    </script>
+    <script>
+        $(function () {
+            $('#MissionCompany').ckeditor();
+        });
+    </script>
+    }

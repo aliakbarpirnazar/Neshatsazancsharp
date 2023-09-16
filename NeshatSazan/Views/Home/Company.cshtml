@@ -1,0 +1,204 @@
+﻿@model ServiceLayer.ViewModels.Client.Farsi.SiteInfoHomeViewModel
+
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "درباره ما";
+    ViewData["metaDescription"] = @Model.Siteinfo.MetaDescription;
+}
+<section class="page-header page-header-modern page-header-background page-header-background-sm overlay overlay-color-primary section overlay-show overlay-op-8 mb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 align-self-center p-static order-2 text-center">
+                <h1 class="mb-n2">درباره ما</h1>
+            </div>
+            <div class="col-md-12 align-self-center order-1">
+                <ul class="breadcrumb breadcrumb-light d-block text-center">
+                    <li><a href="/Home/Index">خانه</a></li>
+                    <li class="active">درباره ما</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container">
+
+    <div class="row pt-4">
+        <div class="col-lg-3">
+            <aside class="sidebar" id="sidebar" data-plugin-sticky data-plugin-options="{'minWidth': 991, 'containerSelector': '.container', 'padding': {'top': 110}}">
+
+                <ul class="nav nav-list flex-column mb-4 show-bg-active">
+                    <li class="nav-item"><a class="nav-link" data-hash data-hash-offset="110" href="#who-we-are">@Model.Siteinfo.Qusetion</a></li>
+                    <li class="nav-item"><a class="nav-link" data-hash data-hash-offset="110" href="#mission-vision">ماموریت و چشم انداز</a></li>
+                    <li class="nav-item"><a class="nav-link" data-hash data-hash-offset="110" href="#leadership">هدایتگری</a></li>
+                    <li class="nav-item"><a class="nav-link" data-hash data-hash-offset="110" href="#partners">هیئت مدیره</a></li>
+                    <li class="nav-item"><a class="nav-link" data-hash data-hash-offset="110" href="#AdminShip">مدیران ارشد</a></li>
+                    <li class="nav-item"><a class="nav-link" data-hash data-hash-offset="110" href="#ChartPicture">نمای کلی چارت سازمان</a></li>
+                </ul>
+
+            </aside>
+        </div>
+        <div class="col-lg-9">
+
+            <section id="who-we-are" class="mb-4">
+
+                <h2 class="mb-0 text-color-dark mt-2 mt-sm-0">@Model.Siteinfo.Qusetion</h2>
+                <p class="lead mb-4 mt-4">@Html.Raw(Model.Siteinfo.Description)</p>
+            </section>
+
+            <hr class="solid my-5">
+
+            <section id="mission-vision" class="mb-4">
+
+                <div class="row mt-4">
+                    <div class="col-sm-6 text-center">
+                        <div class="feature-box feature-box-style-4 justify-content-center mt-4 appear-animation" data-appear-animation="fadeInUp" data-appear-animation-delay="0">
+                            <span class="featured-boxes featured-boxes-style-4 p-0 m-0">
+                                <span class="featured-box featured-box-primary featured-box-effect-6 p-0 m-0">
+                                    <span class="box-content p-0 m-0">
+                                        <i class="icon-featured icon-target icons"></i>
+                                    </span>
+                                </span>
+                            </span>
+                            <div class="feature-box-info">
+                                <h2 class="mb-3 text-color-dark">ماموریت</h2>
+                                <p class="mb-4">@Html.Raw(Model.Siteinfo.MissionCompany)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 text-center">
+                        <div class="feature-box feature-box-style-4 justify-content-center mt-4 appear-animation" data-appear-animation="fadeInUp" data-appear-animation-delay="300">
+                            <span class="featured-boxes featured-boxes-style-4 p-0 m-0">
+                                <span class="featured-box featured-box-primary featured-box-effect-6 p-0 m-0">
+                                    <span class="box-content p-0 m-0">
+                                        <i class="icon-featured icon-eye icons"></i>
+                                    </span>
+                                </span>
+                            </span>
+                            <div class="feature-box-info">
+                                <h2 class="mb-3 text-color-dark">چشم انداز</h2>
+                                <p class="mb-4">@Html.Raw(Model.Siteinfo.VisionCompany)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <hr class="solid my-5">
+
+            <section id="leadership" class="mb-4">
+                <h2 class="mb-0 text-color-dark">هدایت گر</h2>
+
+                <div class="row mt-4">
+                    @foreach (var item in Model.ChartDesigns)
+                    {
+                        @if (item.Title == "1")
+                        {
+                            <div class="col-md-6">
+                                <span class="thumb-info thumb-info-side-image thumb-info-no-zoom no-borders mb-4">
+                                    <span class="thumb-info-side-image-wrapper p-0">
+                                        <img src="~/ViewPicture/@item.Picture" class="img-fluid" alt="@item.PictureAlt" title="@item.PictureTitle" style="width: 160px;">
+                                    </span>
+                                    <span class="thumb-info-caption">
+                                        <span class="thumb-info-caption-text">
+                                            <h5 class="primary-font mb-1">@item.NameFamily - <small class="font-weight-light">@item.SideCompany</small></h5>
+                                            <p class="mb-0">@item.MetaDescription</p>
+                                        </span>
+                                    </span>
+                                </span>
+                            </div>
+                        }
+                    }
+
+                </div>
+
+            </section>
+
+             <hr class="solid my-5">
+
+            <section id="partners" class="mb-4">
+                <h2 class="mb-0 text-color-dark">هیئت مدیره</h2>
+
+                <div class="row mt-4">
+                    @foreach (var item in Model.ChartDesigns)
+                    {
+                        @if (item.Title == "3")
+                        {
+                            <div class="col-md-4">
+                                <span class="thumb-info thumb-info-side-image thumb-info-no-zoom no-borders mb-4">
+                                    <span class="thumb-info-side-image-wrapper p-0">
+                                        <img src="~/ViewPicture/@item.Picture" class="img-fluid" alt="@item.PictureAlt" title="@item.PictureTitle" style="width: 160px;">
+                                    </span>
+                                    <span class="thumb-info-caption">
+                                        <span class="thumb-info-caption-text">
+                                            <h5 class="primary-font mb-1">@item.NameFamily - <small class="font-weight-light">@item.SideCompany</small></h5>
+                                            <p class="mb-0">@item.MetaDescription</p>
+                                        </span>
+                                    </span>
+                                </span>
+                            </div>
+                        }
+                    }
+
+                </div>
+
+            </section>
+             <hr class="solid my-5">
+
+            <section id="AdminShip" class="mb-4">
+                <h2 class="mb-0 text-color-dark">مدیران ارشد</h2>
+
+                <div class="row mt-4">
+                    @foreach (var item in Model.ChartDesigns)
+                    {
+                        @if (item.Title == "2")
+                        {
+                            <div class="col-md-3">
+                                <span class="thumb-info thumb-info-side-image thumb-info-no-zoom no-borders mb-4">
+                                    <span class="thumb-info-side-image-wrapper p-0">
+                                        <img src="~/ViewPicture/@item.Picture" class="img-fluid" alt="@item.PictureAlt" title="@item.PictureTitle" style="width: 160px;">
+                                    </span>
+                                    <span class="thumb-info-caption">
+                                        <span class="thumb-info-caption-text">
+                                            <h5 class="primary-font mb-1">@item.NameFamily - <small class="font-weight-light">@item.SideCompany</small></h5>
+                                            <p class="mb-0">@item.MetaDescription</p>
+                                        </span>
+                                    </span>
+                                </span>
+                            </div>
+                        }
+                    }
+
+                </div>
+
+            </section>
+
+             <hr class="solid my-5">
+
+            <section id="ChartPicture" class="mb-4">
+                <h2 class="mb-0 text-color-dark">تصویر چارت سازمانی </h2>
+
+                <div class="row mt-4">
+                    
+                            <div class="col-md-12">
+                                <span class="thumb-info thumb-info-side-image thumb-info-no-zoom no-borders mb-4">
+                                    <span class="thumb-info-side-image-wrapper p-0">
+                                <img src="~/ViewPicture/@Model.ChartPic.Picture" class="img-fluid" alt="@Model.ChartPic.PictureAlt" title="@Model.ChartPic.PictureTitle">
+                                    </span>                                    
+                                </span>
+                            </div>
+                      
+
+                </div>
+
+            </section>
+
+         
+
+        </div>
+
+    </div>
+
+</div>

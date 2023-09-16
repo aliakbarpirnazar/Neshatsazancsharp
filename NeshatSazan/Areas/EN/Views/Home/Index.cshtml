@@ -1,0 +1,18 @@
+﻿@{
+    Layout = "~/areas/EN/views/shared/_enLayout.cshtml";
+    ViewData["Title"] = " Home Page";
+}
+
+@await Component.InvokeAsync("EnSlider")
+
+@await Component.InvokeAsync("EnSiteinfo")
+
+@await Component.InvokeAsync("EnNewsSite")
+
+@await Component.InvokeAsync("EnProject")
+
+@await Component.InvokeAsync("EnViewsSite")
+
+@await Component.InvokeAsync("EnQuestions")
+
+@await Component.InvokeAsync("EnBlogs")

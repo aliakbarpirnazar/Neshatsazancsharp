@@ -1,0 +1,50 @@
+﻿@model ServiceLayer.ViewModels.Client.Farsi.SiteInfoHomeFarsi
+
+
+@{
+	Layout = "~/areas/EN/views/shared/_enLayout.cshtml";
+	ViewData["Title"] = "contact us";
+	ViewData["metaDescription"] = @Model.MetaDescription;
+}
+<section class="page-header page-header-modern page-header-background page-header-background-sm overlay overlay-color-primary section overlay-show overlay-op-8 mb-5">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 align-self-center p-static order-2 text-center">
+				<h1 class="mb-n2">@ViewData["Title"]</h1>
+			</div>
+			<div class="col-md-12 align-self-center order-1">
+				<ul class="breadcrumb breadcrumb-light d-block text-center">
+					<li><a href="/Home/Index">Home</a></li>
+					<li class="active">@ViewData["Title"]</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<div class="row mb-5">	
+	<div class="col-lg-4 offset-lg-1 appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="800" data-plugin-options="{'accY': -200}">
+
+		<h4 class="pt-5"><strong>note book</strong> what</h4>
+		<ul class="list list-icons list-icons-style-3 mt-2">
+			<li class="line-height-9"><i class="fas fa-map-marker-alt top-6"></i> <strong>Address:</strong><a href="@Model.LinkLocation" class="color text-black">@Model.Address</a></li>
+			<li class="line-height-9"><i class="fas fa-phone top-6"></i> <strong>Phone:</strong> <span class="ltr-text"><a href="tel:@Model.TelNumber">@Model.TelNumber</a></span></li>
+			<li class="line-height-9"><i class="fab fa-telegram top-6"></i> <strong>Telegram:</strong> <a href="@Model.LinkTelegram">@Model.LinkTelegram</a></li>
+			<li class="line-height-9"><i class="fab fa-instagram top-6"></i> <strong>Instagram:</strong> <a href="@Model.Linkinstagram">@Model.Linkinstagram</a></li>
+			<li class="line-height-9"><i class="fab fa-whatsapp top-6"></i> <strong>Whats up:</strong> <a href="@Model.LinkWhatsApp">@Model.LinkWhatsApp</a></li>
+		</ul>
+
+	</div>
+	<div class="col-lg-3 appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="1000" data-plugin-options="{'accY': -200}">
+
+		<h4 class="pt-5"><strong>hours</strong> work</h4>
+		<ul class="list list-icons list-dark mt-2">
+			<li><i class="far fa-clock top-6"></i> Saturday to Thursday - @Model.TimeRun</li>
+			<li><i class="far fa-clock top-6"></i> Friday - holiday</li>
+		</ul>
+
+	</div>
+	
+</div>
+

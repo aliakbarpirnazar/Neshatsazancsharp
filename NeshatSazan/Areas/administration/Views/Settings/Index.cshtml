@@ -1,0 +1,96 @@
+﻿@model ServiceLayer.ViewModels.Admin.SettingsViewModels.SettingsViewModel
+
+@{
+    Layout = "~/areas/administration/views/shared/_AdminLayout.cshtml";
+    ViewData["title"] = "تنظیمات";
+}
+
+
+<div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+    <div class="pe-3"><h4 class="page-title">@ViewData["title"]</h4></div>
+
+    <div class="ms-auto">
+        <a class="btn btn-success btn-lg" asp-action="IndexEN" asp-controller="Settings">تنظیمات انگلیسی </a>
+    </div>
+</div>
+<hr />
+
+<div class="card">
+    <form asp-action="UpdateSettings" asp-controller="Settings"
+          method="post"
+          data-action="Refresh"
+          enctype="multipart/form-data">
+        <div class="modal-body">
+            <div class="row">
+                <input hidden asp-for="Language" />
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label asp-for="SiteName" class="form-label"></label>
+                        <input type="text" class="form-control" asp-for="SiteName">
+                        <span asp-validation-for="SiteName" class="error"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label asp-for="SiteKeys" class="form-label"></label>
+                        <input type="text" class="form-control" asp-for="SiteKeys">
+                        <span asp-validation-for="SiteKeys" class="error"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="mb-3">
+                        <label asp-for="SiteDesc" class="form-label"></label>
+                        <textarea rows="3" class="form-control" asp-for="SiteDesc"></textarea>
+                        <span asp-validation-for="SiteDesc" class="error"></span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label asp-for="Logo" class="form-label"></label>
+                        <input type="file" class="form-control" asp-for="Logo" accept="image/*">
+                        <span asp-validation-for="Logo" class="error"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="LogoAlt" class="form-label"></label>
+                        <input type="text" class="form-control" asp-for="LogoAlt">
+                        <span asp-validation-for="LogoAlt" class="error"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="LogoTitle" class="form-label"></label>
+                        <input type="text" class="form-control" asp-for="LogoTitle">
+                        <span asp-validation-for="LogoTitle" class="error"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <img src="~/ViewPicture/@Model.LogoStr" width="390" height="280">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label asp-for="Icon" class="form-label"></label>
+                        <input type="file" class="form-control" asp-for="Icon" accept="image/x-icon">
+                        <span asp-validation-for="Icon" class="error"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <img src="~/ViewPicture/@Model.IconStr" width="210" height="210">
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-info waves-effect waves-light">بروز رسانی</button>
+        </div>
+    </form>
+</div>

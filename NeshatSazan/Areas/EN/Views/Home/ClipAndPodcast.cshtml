@@ -1,0 +1,48 @@
+﻿@model List<ServiceLayer.ViewModels.Client.Farsi.ClipAndPodcastHomeViewModel>
+
+@{
+    Layout = "~/areas/EN/views/shared/_enLayout.cshtml";
+    ViewData["Title"] = "Clips and podcasts";
+}
+
+<section class="page-header page-header-modern page-header-background page-header-background-sm overlay overlay-color-primary section overlay-show overlay-op-8 mb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 align-self-center p-static order-2 text-center">
+                <h1 class="mb-n2">@ViewData["Title"]</h1>
+            </div>
+            <div class="col-md-12 align-self-center order-1">
+                <ul class="breadcrumb breadcrumb-light d-block text-center">
+                    <li><a href="/En/Home/Index">Home</a></li>
+                    <li class="active">Clips and podcasts</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="container">
+    <div class="row mb-4">
+        @foreach (var item in Model)
+        {
+            <div class="col-lg-3">
+                <div class="mb-2 mb-0">
+                    <a asp-action="Podcast" asp-controller="Home" asp-route-slug="@item.Slug">
+                        <img class="img-fluid pb-3" width="250" height="250" src="/ViewPicture/@item.picture" alt="@item.pictureAlt" title="@item.pictureTitle" />
+                    </a>
+                    <article class="post">
+                        <p>@item.Title</p>
+                    </article>
+                </div>
+            </div>
+
+        }
+
+
+    </div>
+
+    <div class="row mb-4">
+    </div>
+
+</div>
+
+

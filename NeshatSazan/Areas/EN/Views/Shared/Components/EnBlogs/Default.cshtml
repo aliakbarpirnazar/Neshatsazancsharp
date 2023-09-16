@@ -1,0 +1,38 @@
+﻿@using ServiceLayer.ViewModels.Client.Farsi
+@model List<blogHomeViewModel>
+@if (Model.Count != 0)
+{
+    <section class="pb-4 section-no-border section-custom-construction">
+        <div class="container">
+            <div class="row pt-4">
+                <div class="col">
+                    <h2 class="mb-0 text-color-dark">Articles</h2>
+                </div>
+            </div>
+            <div class="row pb-4 pb-lg-0">
+                @foreach (var item in Model)
+                {
+
+                    <div class="col-lg-4">
+                        <div class="recent-posts mt-4">
+                            <a asp-action="Article" asp-controller="Home" asp-route-slug="@item.Slug">
+                                <img class="img-fluid pb-3" src="~/ViewPicture/@item.Picture" alt="@item.PictureAlt" title="@item.PictureTitle" width="250">
+                            </a>
+                            <article class="post">
+                                <div class="post-date">
+                                    <span class="day">@item.StartDay</span>
+                                    <span class="month">@item.StartMonth</span>
+                                </div>
+                                <h4 class="mb-1"><a class="text-color-dark" asp-action="Article" asp-controller="Home" asp-route-slug="@item.Slug">@item.Title</a></h4>
+                                <p >@item.GropArticle</p>
+                                <p class="mb-3">@item.MetaDescription</p>
+                                <a asp-action="Article" asp-controller="Home" asp-route-slug="@item.Slug">read more <i class="fas fa-long-arrow-alt-left align-middle"></i></a>
+                            </article>
+                        </div>
+                    </div>
+                }
+
+            </div>
+        </div>
+    </section>
+}

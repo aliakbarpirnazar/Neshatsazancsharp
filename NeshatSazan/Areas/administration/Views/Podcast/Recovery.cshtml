@@ -1,0 +1,152 @@
+﻿@using ServiceLayer.ViewModels.Admin.PodcastViewModels
+@using ServiceLayer.ViewModels
+@model BaseFilterViewModel<ListPodcastViewModel>
+@{
+    ViewData["Title"] = " لیست کلیپ ها و پادکست ها حذف شده";
+    Layout = "~/Areas/administration/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+    <div class="pe-3"><h4 class="page-title">@ViewData["title"]</h4></div>
+
+</div>
+<hr />
+
+<div class="card">
+    <div class="card-header">
+        <form method="get" asp-action="Recovery" id="formFilter">
+            <input hidden value="@Model.PageIndex" id="pageId" name="pageId" />
+            <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+                <div class="pe-3"><h4 class="page-title"> <input type="search" name="search" class="form-control form-control-sm" placeholder="جستجو"></h4></div>
+
+                <div class="ms-auto">
+                    <button class="btn btn-info " type="submit">جستجو</button>
+                    <a class="btn btn-info " href="/Administration/Podcast">نمایش همه</a>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="card-body">
+        <table class="table mb-0 table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">زبان</th>
+                    <th scope="col">عنوان</th>
+                    <th scope="col">تاریخ ثبت</th>
+                    <th scope="col">حذف شده</th>
+                    <th scope="col">عملیات</th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    int counter = 1;
+                }
+
+                @foreach (var item in Model.Entities)
+                {
+                    <tr>
+                        <th scope="row">@counter</th>
+                        <td>
+                            @if (item.Language == "0")
+                            {
+                                <p>فارسی</p>
+                            }
+                            @if (item.Language == "1")
+                            {
+                                <p>انگلیسی</p>
+                            }
+                        </td>
+                        <td>@item.Title</td>
+                        <td>@item.CreationDate</td>
+                        <td>
+
+                            @if (!item.IsRemoved)
+                            {
+                                <p class="text-success">موجود</p>
+                            }
+                            @if (item.IsRemoved)
+                            {
+                                <p class="text-danger">حذف شده</p>
+                            }
+                        </td>
+                        <td>
+
+                            <a asp-action="GetRecovery" asp-controller="Podcast" asp-route-id="@item.Id" class="btn btn-info">
+                                بازگردانی
+                            </a>
+
+
+
+                        </td>
+                    </tr>
+                    counter++;
+                }
+
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card-footer">
+        @if (Model.PageCount > 1)
+        {
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    @if (Model.PageIndex > Model.StartPage)
+                    {
+                        <li class="page-item">
+                            <a class="page-link" href="javascript:;" aria-label="Previous">
+                                <span aria-hidden="true">«</span>
+                            </a>
+                        </li>
+                    }
+                    @for (int i = Model.StartPage; i <= Model.EndPage; i++)
+                    {
+                        <li class="page-item">
+                            <a class="page-link paginations @(Model.PageIndex == i ? "active" : "")" href="javascript:;">@i</a>
+                        </li>
+                    }
+
+                    @if (Model.PageIndex < Model.EndPage)
+                    {
+                        <li class="page-item">
+                            <a class="page-link" href="javascript:;" aria-label="Next">
+                                <span aria-hidden="true">»</span>
+                            </a>
+                        </li>
+                    }
+
+                </ul>
+            </nav>
+        }
+
+    </div>
+</div>
+         
+
+<div class="modal" id="myModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+
+        <div id="bodyModal" class="modal-content">
+        </div>
+
+
+    </div>
+</div>
+
+
+
+
+
+@section Scripts{
+
+    <script>
+        $(document).ready(function () {
+            $(".paginations").click(function () {
+                $("#pageId").val($(this).text());
+                $("#formFilter").submit();
+            })
+        }
+        )
+    </script>
+                }

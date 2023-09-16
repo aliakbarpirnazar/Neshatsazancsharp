@@ -1,0 +1,173 @@
+﻿@using ServiceLayer.ViewModels
+@using ServiceLayer.ViewModels.Admin.IdentityViewModels
+@model BaseFilterViewModel<ListUserForAdminViewModel>
+
+
+@{
+    ViewData["Title"] = "نمایش کاربران";
+    Layout = "~/Areas/administration/Views/Shared/_AdminLayout.cshtml";
+    int counter = 1;
+}
+<form method="get" asp-action="UsersList" id="formFilter">
+    <input hidden value="@Model.PageIndex" id="pageId" name="pageId" />
+</form>
+
+<div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+    <div class="pe-3"><h4 class="page-title">@ViewData["title"]</h4></div>
+
+    <div class="ms-auto">
+        <a class="btn btn-success btn-lg" href="/Administration/Account/AddUser">ایجاد</a>
+    </div>
+</div>
+<hr />
+<div class="card">
+    
+    <div class="card-body">
+        <table class="table mb-0 table-hover">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>نام نمایشی</th>
+                    <th>شماره موبایل</th>
+                    <th>تاریخ ثبت نام</th>
+                    <th> وضعیت</th>
+
+                    <th> عملیات</th>
+                </tr>
+            </thead>
+            <tbody>             
+
+                @foreach (var obj in Model.Entities)
+                {
+                    <tr>
+                        <td> @counter</td>
+                        <td> @obj.DisplayName</td>
+                        <td> @obj.PhoneNumber</td>
+                        <td> @obj.CreateDate</td>
+                        <td>
+                            @if (obj.IsRemoved)
+                            {
+                                <p class="text-danger"> حذف</p>
+
+                            }
+                            else
+                            {
+                                <p class="text-success">موجود</p>
+                            }
+
+                        </td>
+                        <td>
+                            <a class="btn btn-warning pull-right m-rl-5" href="/administration/account/EditUser/@obj.UserId">
+                              ویرایش
+                            </a>
+                            <a class="btn btn-primary  pull-right m-rl-5" href="/administration/account/PasswordUser/@obj.UserId">
+                              تغییر رمز عبور
+                            </a>   
+                            @if (obj.IsRemoved)
+                            {
+                                
+                            <a class="btn btn-info" href="/administration/account/RecoveryUser/@obj.UserId">
+                               بازگردانی
+                                </a>
+                            }
+                            else
+                            {
+                                <a class="btn btn-danger" href="/administration/account/DeleteUser/@obj.UserId">
+                                    حذف
+                                </a>
+                                
+                            }
+                        </td>
+                    </tr>
+                    counter++;
+                }
+
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card-footer">
+        @if (Model.PageCount > 1)
+        {
+            <div id="view-pagination">
+                <div class="row">
+                    <div class="col s12">
+                        <ul class="pagination">
+                            @if (Model.PageIndex > Model.StartPage)
+                            {
+                                <li class="waves-effect">
+                                    <a href="#!">
+                                        <i class="material-icons">chevron_left</i>
+                                    </a>
+                                </li>
+                            }
+                            else
+                            {
+                                <li class="disabled">
+                                    <a href="#">
+                                        <i class="material-icons">chevron_left</i>
+                                    </a>
+                                </li>
+                            }
+                            @for (int i = Model.StartPage; i <= Model.EndPage; i++)
+                            {
+                                @if (Model.PageIndex == 0)
+                                {
+                                    Model.PageIndex = 1;
+                                }
+                                @if (Model.PageIndex == i)
+                                {
+                                    <li class="active">
+                                        <a href="/Administration/Account/UsersList?pageId=@i" class="Paginations">@i</a>
+                                    </li>
+                                }
+                                else
+                                {
+                                    <li class="waves-effect">
+                                        <a href="/Administration/Account/UsersList?pageId=@i" class="Paginations">@i</a>
+                                    </li>
+                                }
+                            }
+                            @if (Model.PageIndex < Model.EndPage)
+                            {
+                                <li class="waves-effect">
+                                    <a href="#!">
+                                        <i class="material-icons">chevron_right</i>
+                                    </a>
+                                </li>
+                            }
+                            else
+                            {
+                                <li class="disabled">
+                                    <a href="#!">
+                                        <i class="material-icons">chevron_right</i>
+                                    </a>
+                                </li>
+                            }
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        }
+
+    </div>
+</div>
+
+
+
+
+
+@section Scripts{
+
+
+    <script>
+        $(document).ready(function () {
+            $(".paginations").click(function () {
+                $("#pageId").val($(this).text());
+                $("#formFilter").submit();
+            })
+        }
+        )
+    </script>
+                }

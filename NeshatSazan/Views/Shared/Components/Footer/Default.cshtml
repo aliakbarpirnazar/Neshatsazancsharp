@@ -1,0 +1,56 @@
+﻿@model ServiceLayer.ViewModels.Client.Farsi.Footer.FooterViewModel
+
+
+<footer>
+	<div class="footer-links">
+		<div>
+			<p>فهرست</p>
+			<ul>
+				<li><a href="#">خانه</a></li>
+				<li><a href="#">پروژه ها</a></li>
+				<li><a href="#">اخبار</a></li>
+				<li><a href="#">افتخارات</a></li>
+			</ul>
+		</div>
+		<div>
+			<p> </p>
+			<ul>
+				<li><a href="#">کلیپ ها</a></li>
+				<li><a href="#">شرکت</a></li>
+				<li><a href="#">مقالات</a></li>
+			</ul>
+		</div>
+		<div>
+			<p>مقالات</p>
+			<ul>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+			</ul>
+		</div>
+		<div>
+			<p>تماس باما</p>
+			<ul>
+				<li><a href="#">(025)32051</a></li>
+				<li><a href="#">قم،خیابان الغدیر انتهای کوچه 51 برج نشاط</a></li>
+
+			</ul>
+		</div>
+	</div>
+	<div class="social-media">
+		<p>نشاط در شبکه های اجتماعی</p>
+		<div>
+			@if (Model.siteInfoFooter.Linkinstagram != null)
+				{
+				<a href="@Model.siteInfoFooter.Linkinstagram"><img src="~/clienttheme/images/instagram.svg" /></a>
+				}
+				@if (Model.siteInfoFooter.LinkTelegram != null)
+				{
+				<a href="@Model.siteInfoFooter.LinkTelegram"><img src="~/clienttheme/images/telegram.svg" /></a>
+				}
+			<a><img src="~/clienttheme/images/twitter.svg" /></a>
+			<a><img src="~/clienttheme/images/linkedin.svg" /></a>
+			<a><img src="~/clienttheme/images/aparat.svg" /></a>
+		</div>
+	</div>
+</footer>

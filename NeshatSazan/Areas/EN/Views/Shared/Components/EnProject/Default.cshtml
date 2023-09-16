@@ -1,0 +1,51 @@
+﻿@using ServiceLayer.ViewModels.Client.Farsi
+@model List<ProjectsHomeViewModel>
+@{
+    int cunter = 1;
+}
+@if (Model.Count != 0)
+{
+    <section class="pt-3 pb-4 home-concept-construction">
+        <div class="container">
+            <div class="row pt-4">
+                <div class="col">
+                    <h2 class="mb-4 text-color-dark">Projects</h2>
+                    <p class="lead">---------</p>
+
+                    <div class="diamonds-wrapper " data-plugin-options="{'delegate': '.diamond', 'type': 'image', 'gallery': {'enabled': true}}">
+                        <ul class="diamonds">
+
+                            @foreach (var item in Model)
+                            {
+                                if (cunter == 4 || cunter == 6)
+                                {
+                                    <li>
+                                        <a asp-action="Project" asp-controller="Home" asp-route-slug="@item.Slug" class="diamond diamond-sm">
+                                            <div class="content">
+                                                <img src="~/ViewPicture/@item.Picture" class="img-fluid" alt="@item.PictureAlt" title="@item.PictureTitle">
+                                            </div>
+                                        </a>
+                                    </li>
+                                }
+                                else
+                                {
+                                    <li>
+                                        <a asp-action="Project" asp-controller="Home" asp-route-slug="@item.Slug" class="diamond">
+                                            <div class="content">
+                                                <img src="~/ViewPicture/@item.Picture" class="img-fluid" alt="@item.PictureAlt" title="@item.PictureTitle">
+                                            </div>
+                                        </a>
+                                    </li>
+
+                                }
+                                cunter++;
+                            }
+
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+}

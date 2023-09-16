@@ -1,0 +1,101 @@
+﻿@model DataLayer.Models.NewsManagement.NewsSite
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "نمایش خبر";
+    ViewData["metaDescription"] = @Model.MetaDescription;
+    ViewData["keywords"] = Model.Keywords;
+
+}
+<section class="page-header page-header-modern page-header-background page-header-background-sm overlay section overlay-color-primary overlay-show overlay-op-8 mb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 align-self-center p-static order-2 text-center">
+                <h1 class="mb-n2">@ViewData["Title"] : @Model.Title </h1>
+            </div>
+            <div class="col-md-12 align-self-center order-1">
+                <ul class="breadcrumb breadcrumb-light d-block text-center">
+                    <li><a href="/Home/Index">خانه</a></li>
+                    <li><a href="/Home/News">اخبار</a></li>
+                    <li class="active">@Model.Title</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container">
+
+    <div class="blog-posts single-post">
+
+        <article class="post post-large blog-single-post border-0 m-0 p-0">
+            @if (Model.sliderNewsSites.Count() != 0)
+            {
+                <div class="row">
+
+                    <div class="slider-container rev_slider_wrapper" style="height: 510px;">
+                        <div id="revolutionSlider" class="slider rev_slider" data-version="5.4.8" data-plugin-revolution-slider data-plugin-options="{'delay': 9000, 'gridwidth': 1170, 'gridheight': 510, 'disableProgressBar': 'on', 'responsiveLevels': [4096,1200,992,500], 'parallax': { 'type': 'scroll', 'origo': 'enterpoint', 'speed': 1000, 'levels': [2,3,4,5,6,7,8,9,12,50], 'disable_onmobile': 'on' }, 'navigation' : {'arrows': { 'enable': true }, 'bullets': {'enable': true, 'style': 'bullets-style-1', 'h_align': 'center', 'v_align': 'bottom', 'space': 7, 'v_offset': 70, 'h_offset': 0}}}">
+                            <ul>
+                                @foreach (var item in Model.sliderNewsSites)
+                                {
+                                    <li class="slide" data-transition="fade">
+                                        <img src="~/ViewPicture/@item.Picture"
+                                             alt="@item.PictureAlt"
+                                             title="@item.PictureTitle"
+                                             data-bgposition="center center"
+                                             data-bgfit="cover"
+                                             data-bgrepeat="no-repeat"
+                                             class="rev-slidebg">
+                                    </li>
+
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+            }           
+            @if (Model.videoNewsSites.Count() != 0)
+            {
+                <div class="container">
+                    <div class="row mb-4">
+                        @foreach (var item in Model.videoNewsSites)
+                        {
+
+                            <div class="embed-responsive embed-responsive-16by9 col-4">
+                                <iframe frameborder="0" allowfullscreen="" src="/ViewPicture/@item.Video">
+                                </iframe>
+                            </div>
+                        }
+                    </div>
+
+                    <div class="row mb-4">
+                    </div>
+
+                </div>
+
+
+            }
+
+
+            <div class="post-date ml-0">
+                <span class="day">@ViewBag.Day</span>
+                <span class="month">@ViewBag.Month</span>
+            </div>
+
+            <div class="post-content ml-0">
+
+                <h2 class="font-weight-bold mt-n3 mb-2 pb-1 pt-1 line-height-7 text-7"><a href="#">@Model.Title</a></h2>
+
+                <div class="post-meta">
+                    <span><i class="far fa-folder"></i><a href="#"> @Model.Keywords </a> </span>
+                </div>
+
+                <p> @Html.Raw(Model.Description)</p>
+
+
+            </div>
+        </article>
+
+    </div>
+
+</div>

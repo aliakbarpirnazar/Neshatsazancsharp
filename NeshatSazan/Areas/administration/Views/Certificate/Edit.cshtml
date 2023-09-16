@@ -1,0 +1,79 @@
+﻿@model ServiceLayer.ViewModels.Admin.CertificateViewModels.EditCertificateViewModel
+
+@{
+    Layout = "~/areas/administration/views/shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "ویرایش";
+}
+<div class="card">
+    <div class="modal-header">
+        <h4 class="modal-title">@ViewData["Title"] : @Model.Title</h4>
+    </div>
+
+
+    <form asp-action="Edit" asp-controller="Certificate"
+          method="post"
+          data-action="Refresh"
+          enctype="multipart/form-data">
+        <div class="modal-body">
+            <input hidden asp-for="Id" />
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label asp-for="Title" class="form-label"></label>
+                        <input type="text" class="form-control" id="Name1" asp-for="Title" onchange="makeSlug('Name1', 'Slug')">
+                        <span asp-validation-for="Title" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label asp-for="EnTitle" class="form-label"></label>
+                        <input type="EnTitle" class="form-control" id="Name1" asp-for="EnTitle">
+                        <span asp-validation-for="EnTitle" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label asp-for="Slug" class="form-label"></label>
+                        <input type="text" class="form-control" asp-for="Slug">
+                        <span asp-validation-for="Slug" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label asp-for="Picture" class="form-label"></label>
+                        <input type="file" class="form-control" asp-for="Picture" accept="image/*">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <img src="~/ViewPicture/@Model.PictureStr" width="150" height="150" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label asp-for="PictureAlt" class="form-label"></label>
+                        <input type="text" class="form-control" asp-for="PictureAlt">
+                        <span asp-validation-for="PictureAlt" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label asp-for="PictureTitle" class="form-label"></label>
+                        <input type="text" class="form-control" asp-for="PictureTitle">
+                        <span asp-validation-for="PictureTitle" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-info waves-effect waves-light">ویرایش</button>
+        </div>
+    </form>
+</div>

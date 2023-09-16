@@ -1,0 +1,113 @@
+﻿@model ServiceLayer.ViewModels.Client.Farsi.Footer.FooterViewModel
+
+
+<footer id="footer">
+	<div class="container">
+		<div class="row pt-4 pb-5 text-center text-md-left">
+			<div class="col-md-3">
+				<a href="/En">
+					<img alt="@Model.SettingMenu.LogoAlt" title="@Model.SettingMenu.LogoTitle" class="img-fluid logo" width="110" src="~/ViewPicture/@Model.SettingMenu.LogoStr">
+				</a>
+			</div>
+			<div class="col-md-4 mt-5 mt-md-0">
+				<div class="row">
+					<div class="col-lg-6 mb-2">
+						<h4>List</h4>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-4 mb-0">
+						<ul class="list list-footer-nav">
+							<li>
+								<a href="/En/Home/Index">
+									Home
+								</a>
+							</li>
+							<li>
+								<a href="/En/Home/Projects">
+									Projects
+								</a>
+							</li>
+							<li>
+								<a href="/En/Home/News">
+									News
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-4">
+						<ul class="list list-footer-nav">
+							<li>
+								<a href="/En/Home/Certificates">
+									Honors and certificates
+								</a>
+							</li>
+							<li>
+								<a href="/En/Home/ClipAndPodcast">
+									Clips and podcasts
+								</a>
+							</li>
+							<li>
+								<a href="/En/Home/Company">
+									Company
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-4">
+						<ul class="list list-footer-nav">
+							<li>
+								<a asp-action="CategoryArticle" asp-controller="Home">
+									articles
+								</a>
+							</li>
+							<li>
+								<a href="/En/Home/Contact">
+									contact us
+								</a>
+							</li>
+							<li>
+								<a href="/En/home/Company">
+									about us
+								</a>
+							</li>
+							
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-5 mt-4 mt-md-0">
+				<p><i class="fas fa-phone"></i> <span class="ltr-text">@Model.siteInfoFooter.TelNumber</span></p>
+				<p><i class="fas fa-map-marker-alt"></i> <a class="ltr-text" href="@Model.siteInfoFooter.LinkLocation">@Model.siteInfoFooter.Address</a></p>
+			<ul class="header-social-icons social-icons d-none d-sm-block">
+				@if (Model.siteInfoFooter.Linkinstagram != null)
+				{
+					<li class="social-icons-instagram"><a href="@Model.siteInfoFooter.Linkinstagram" target="_blank" title="instagram"><i class="fab fa-instagram"></i></a></li>
+				}
+				@if (Model.siteInfoFooter.LinkWhatsApp != null)
+				{
+					<li class="social-icons-whatsapp"><a href="@Model.siteInfoFooter.LinkWhatsApp" target="_blank" title="whatsapp"><i class="fab fa-whatsapp"></i></a></li>
+				}
+				@if (Model.siteInfoFooter.LinkTelegram != null)
+				{
+					<li class="social-icons-telegram"><a href="@Model.siteInfoFooter.LinkTelegram" target="_blank" title="telegram"><i class="fab fa-telegram"></i></a></li>
+				}
+			</ul>
+
+			</div>
+		</div>
+
+		<div class="footer-copyright">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<p>Designed and developed by <a herf="tel:09128541094">Aliakbarpirnazar</a></p>
+					<ul class="header-social-icons social-icons d-none d-sm-block">
+						<li class="social-icons-whatsapp"><a href="https://wa.me/989128541094" target="_blank" title="whatsapp"><i class="fab fa-whatsapp"></i></a></li>
+							<li class="social-icons-telegram"><a href="https://t.me/989128541094" target="_blank" title="telegram"><i class="fab fa-telegram"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</footer>

@@ -1,0 +1,117 @@
+﻿@{
+    ViewData["Title"] = "پنل کاربری";
+    Layout = "~/areas/administration/views/shared/_AdminLayout.cshtml";
+}
+<div class="row row-cols-1 row-cols-lg-2 row-cols-xl-4">
+    <div class="col">
+        <div class="card radius-10 overflow-hidden">
+            <div class="card-body">
+                <div class="d-flex align-items-center">
+                    <div>
+                        <p class="mb-0">   تعداد پروژه ها </p>
+                        <h5 class="mb-0">@ViewBag.Counter</h5>
+                    </div>
+                    <div class="ms-auto">
+                        <i class="bx bx-buildings font-30"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card radius-10 overflow-hidden">
+            <div class="card-body">
+                <div class="d-flex align-items-center">
+                    <div>
+                        <p class="mb-0"> تعداد واحد ها </p>
+                        <h5 class="mb-0">@ViewBag.sum</h5>
+                    </div>
+                    <div class="ms-auto">
+                        <i class="bx bx bx-home-circle font-30"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card radius-10 overflow-hidden">
+            <div class="card-body">
+                <div class="d-flex align-items-center">
+                    <div>
+                        <p class="mb-0">تعداد عضو نشاط </p>
+                        <h5 class="mb-0">@ViewBag.Contect</h5>
+                    </div>
+                    <div class="ms-auto">
+                        <i class="bx bx-user font-30"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card radius-10 overflow-hidden">
+            <div class="card-body">
+                <div class="d-flex align-items-center">
+                    <div>
+                        <p class="mb-0">  تعداد بازدید سایت</p>
+                        <h5 class="mb-0">@ViewBag.Visit</h5>
+                    </div>
+                    <div class="ms-auto">
+                        <i class="bx bx-street-view font-30"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card radius-10 px-2">
+    <div class="modal-header mb-3">
+        <h4 class="modal-title">دسترسی سریع تنظیمات</h4>
+    </div>
+<div class="row mb-3">
+    <div class="col-md-3">
+            <a type="button" href="/administration/Settings" class="btn btn-outline-success  px-5 radius-20"><i class="bx bx-cog mr-2"></i>تنظیمات سایت </a>
+    </div>
+    <div class="col-md-3">
+            <a type="button" href="/administration/SiteInfo" class="btn btn-outline-success  px-5 radius-20"><i class="bx bx-file mr-2"></i>درباره ما </a>
+    </div>
+   
+</div>
+
+</div>
+<div class="card radius-10 px-2">
+    <div class="modal-header mb-3">
+        <h4 class="modal-title">دسترسی سریع افزودن</h4>
+    </div>
+<div class="row mb-3">
+    <div class="col-md-3">
+            <a type="button" href="/administration/SlideHeader/Create" class="btn btn-outline-success  px-5 radius-20"><i class="bx bx-plus mr-2"></i>افزودن اسلاید </a>
+    </div>
+    <div class="col-md-3">
+            <a type="button" href="/administration/Project/Create" class="btn btn-outline-success  px-5 radius-20"><i class="bx bx-plus mr-2"></i>افزودن پروژه </a>
+    </div>
+    <div class="col-md-3">
+            <a type="button" href="/administration/Question/Create" class="btn btn-outline-success  px-5 radius-20"><i class="bx bx-plus mr-2"></i>افزودن سوال </a>
+    </div>
+    <div class="col-md-3">
+            <a type="button" href="/administration/NewsSite/Create" class="btn btn-outline-success  px-5 radius-20"><i class="bx bx-plus mr-2"></i>افزودن خبر </a>
+    </div>
+</div>
+
+<div class="row mb-3">
+    <div class="col-md-3">
+            <a type="button" href="/administration/Certificate/Create" class="btn btn-outline-success  px-5 radius-20"><i class="bx bx-plus mr-2"></i>افزودن افتخارات </a>
+    </div>
+    <div class="col-md-3">
+            <a type="button" href="/administration/Podcast/Create" class="btn btn-outline-success  px-5 radius-20"><i class="bx bx-plus mr-2"></i>افزودن پادکست </a>
+    </div>
+    <div class="col-md-3">
+            <a type="button" href="/administration/ArticleCategories/Create" class="btn btn-outline-success  px-5 radius-20"><i class="bx bx-plus mr-2"></i>افزودن گروه مقاله </a>
+    </div>
+    <div class="col-md-3">
+            <a type="button" href="/administration/Articles/Create" class="btn btn-outline-success  px-5 radius-20"><i class="bx bx-plus mr-2"></i>افزودن مقاله </a>
+    </div>
+</div>
+</div>
+
+

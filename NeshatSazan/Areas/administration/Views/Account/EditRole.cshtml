@@ -1,0 +1,35 @@
+﻿@model ServiceLayer.ViewModels.Admin.IdentityViewModels.RoleViewModel
+@{
+    Layout = "~/areas/administration/views/shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "ویرایش";
+}
+<div class="card px-2">
+    <div class="modal-header">
+        <h4 class="modal-title">@ViewData["Title"]  : @Model.Title</h4>
+    </div>
+
+    <form asp-action="EditRole" asp-asp-controller="Account" class="s12 m2 l2">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="mb-3">
+                    <label asp-for="Title" class="form-label">نام</label>
+                    <input type="text" class="form-control" asp-for="Title" id="Title">
+                    <span asp-validation-for="Title" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="mb-3">
+                    <div class="form-check">
+                        <br />
+                        <br />
+                        <input class="form-check-input" type="checkbox" asp-for="IsDeleted" />
+                        <label class="form-check-label" for="flexCheckChecked">@Html.DisplayNameFor(Model => Model.IsDeleted) </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-success waves-effect waves-light m-b-5">ویرایش</button>
+
+    </form>
+</div>

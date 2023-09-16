@@ -1,0 +1,37 @@
+﻿@model List<DataLayer.Models.CertificateManagement.Certificate>
+
+@{
+    Layout = "~/areas/EN/views/shared/_enLayout.cshtml";
+    ViewData["Title"] = "Honors and certificates";
+}
+
+<section class="page-header page-header-modern page-header-background page-header-background-sm overlay overlay-color-primary section overlay-show overlay-op-8 mb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 align-self-center p-static order-2 text-center">
+                <h1 class="mb-n2">@ViewData["Title"]</h1>
+            </div>
+            <div class="col-md-12 align-self-center order-1">
+                <ul class="breadcrumb breadcrumb-light d-block text-center">
+                    <li><a href="/En/Home/Index">Home</a></li>
+                    <li class="active">@ViewData["Title"]</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container">
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-lg-3 mb-4">
+                <span class="img-thumbnail d-block">
+                    <img class="img-fluid" src="~/ViewPicture/@item.Picture" alt="@item.PictureAlt" title="@item.PictureTitle">
+                </span>
+                <h8 class="text-uppercase mt-4">@item.Title</h8>
+            </div>
+        }
+    </div>
+</div>
+

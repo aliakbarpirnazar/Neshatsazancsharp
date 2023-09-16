@@ -1,0 +1,133 @@
+﻿@model ServiceLayer.ViewModels.Admin.ArticleCategoryViewModels.ArticleCategoryIndexViewModel
+
+@{
+    Layout = "~/areas/administration/views/shared/_AdminLayout.cshtml";
+    ViewData["title"] = "مدیریت گروه مقالات";
+}
+
+<div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+    <div class="pe-3"><h4 class="page-title">@ViewData["title"]</h4></div>
+
+    <div class="ms-auto">
+        <a class="btn btn-success btn-lg" href="/administration/ArticleCategories/Create">ایجاد</a>
+    </div>
+</div>
+<hr />
+
+<div class="card">
+    <div class="card-header">
+        <form class="form-inline" role="form" method="get">
+            <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+                <div class="pe-3">
+                    <h4 class="page-title">
+                        <input class="form-control" asp-for="Name" placeholder="نام گروه مقاله">
+                    </h4>
+
+                </div>
+
+                <div class="ms-auto">
+                    <button type="submit" class="btn btn-success waves-effect waves-light m-l-10">جستجو</button>
+                    <a class="btn btn-primary waves-effect waves-light m-l-10" href="/administration/ArticleCategories">مشاهده همه</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-body">
+        <table id="example" class="table table-striped table-bordered" style="width:100%">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>زبان</th>
+                    <th>عکس</th>
+                    <th>نام</th>
+                    <th>توضیحات</th>
+                    <th>ترتیب نمایش</th>
+                    <th>تعداد مقالات</th>
+                    <th>تاریخ تولید</th>
+                    <th >حذف شده</th>
+                    <th>عملیات</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.articleCategory)
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>
+                            @if (item.Language == "0")
+                            {
+                                <p>فارسی</p>
+                            }
+                            else
+                            {
+                                <p>انگلیسی</p>
+                            }
+                        </td>
+                        <td>
+                            <img src="~/ViewPicture/@item.Picture" style="width: 40px; height: 40px" />
+                        </td>
+                        <td>@item.Name</td>
+                        <td>@item.Description</td>
+                        <td>@item.ShowOrder</td>
+                        <td>@item.ArticlesCount</td>
+                        <td>@item.CreationDate</td>
+                        <td>
+
+                            @if (!item.IsRemoved)
+                            {
+                                <p class="text-success">موجود</p>
+                            }
+                            @if (item.IsRemoved)
+                            {
+                                <p class="text-danger">حذف شده</p>
+                            }
+                        </td>
+                        <td>
+
+                            <a class="btn btn-warning pull-right m-rl-5"
+                               href="/administration/ArticleCategories/Edit/@item.Id">
+                                ویرایش
+                            </a>
+                            @if (!item.IsRemoved)
+                            {
+                                <a asp-action="Delete" asp-controller="ArticleCategories" asp-route-id="@item.Id" class="btn btn-danger">
+                                    حذف
+                                </a>
+                            }
+                            @if (item.IsRemoved)
+                            {
+                                <a asp-action="GetRecovery" asp-controller="ArticleCategories" asp-route-id="@item.Id" class="btn btn-info">
+                                    بازگردانی
+                                </a>
+                            }
+
+                           
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+          
+@section Scripts {
+  
+    <script>
+    $(document).ready(function () {
+        $(".paginations").click(function () {
+            $("#pageId").val($(this).text());
+            $("#formFilter").submit();
+        })
+    }
+    )
+    </script>
+    <script>
+        function hideModal() {
+            $("#myModal").modal("hide");
+        }
+    </script>
+}

@@ -1,0 +1,12 @@
+D:\Project\Train Project\Neshatsazan\0_Framework\bin\Release\net7.0\0_Framework.deps.json
+D:\Project\Train Project\Neshatsazan\0_Framework\bin\Release\net7.0\0_Framework.dll
+D:\Project\Train Project\Neshatsazan\0_Framework\bin\Release\net7.0\0_Framework.pdb
+D:\Project\Train Project\Neshatsazan\0_Framework\obj\Release\net7.0\0_Framework.csproj.AssemblyReference.cache
+D:\Project\Train Project\Neshatsazan\0_Framework\obj\Release\net7.0\0_Framework.GeneratedMSBuildEditorConfig.editorconfig
+D:\Project\Train Project\Neshatsazan\0_Framework\obj\Release\net7.0\0_Framework.AssemblyInfoInputs.cache
+D:\Project\Train Project\Neshatsazan\0_Framework\obj\Release\net7.0\0_Framework.AssemblyInfo.cs
+D:\Project\Train Project\Neshatsazan\0_Framework\obj\Release\net7.0\0_Framework.csproj.CoreCompileInputs.cache
+D:\Project\Train Project\Neshatsazan\0_Framework\obj\Release\net7.0\0_Framework.dll
+D:\Project\Train Project\Neshatsazan\0_Framework\obj\Release\net7.0\refint\0_Framework.dll
+D:\Project\Train Project\Neshatsazan\0_Framework\obj\Release\net7.0\0_Framework.pdb
+D:\Project\Train Project\Neshatsazan\0_Framework\obj\Release\net7.0\ref\0_Framework.dll
